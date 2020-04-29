@@ -1,12 +1,77 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <div class="container">
+    <div class="wrapper">
+      <input type="checkbox" id="menu-trigger" class="menu-trigger" checked />
+      <label for="menu-trigger">&#9776;</label>
+
+      <nav>
+        <ul class="slider-menu">
+          <h5>explorar</h5>
+          <li class="categor"><a href="#todos">todos</a>
+
+            <div class="dropdown">
+              <input class="dropdown-toggle" type="text">
+              <div class="dropdown-text">casas</div>
+              <ul class="dropdown-content">
+                <li><a href="#">gryffindor</a></li>
+                <li><a href="#">slytherin</a></li>
+                <li><a href="#">ravenclaw</a></li>
+                <li><a href="#">hufflepuff</a></li>
+              </ul>
+            </div>
+
+          <li class="categor"><a href="#ocupacion">ocupación</a>
+            <ul>
+              <li><a href="#">estudiante de hogwarts</a></li>
+              <li><a href="#">staff de hogwarts</a></li>
+              <li><a href="#">otra ocupación</a></li>
+            </ul>
+          </li>
+
+
+          <li class="categor"><a href="#linaje">linaje</a>
+            <ul>
+              <li><a href="#">sangre pura</a></li>
+              <li><a href="#">mestizo</a></li>
+              <li><a href="#">hijo de muggles</a></li>
+              <li><a href="#">squib</a></li>
+            </ul>
+          </li>
+
+
+          <li class="categor"><a href="#otras">otras criaturas</a></li>
+        </ul>
+      </nav>
+
+
+
+
+      <div class="content-wrap">
+
+        <img src="img/logohpwu.svg" class="big-logo">
+
+        <h3>guía para el novato absoluto</h3>
+
+
+      </div>
+
+
+    </div>
+  </div>
+
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
