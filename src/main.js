@@ -1,83 +1,32 @@
-//import { filterData } from './data.js'; PONER
-//import { allCharacters } from './data.js'; PONER
-
-// import data from './data/lol/lol.js';
 import harryData from './data/potter/potter.js';
-// import data from './data/rickandmorty/rickandmorty.js';
 
 
-const data = harryData; //NO SACAR de acá sale todo
+// card
+for (let i=0; i< harryData.length; i++ ) {
 
-//When press <todos> on side menu
+  let harryCard= document.createElement("div"); 
+  harryCard.className="harryCards";
+  harryCard.id="harryCards";
 
-document.getElementById("left-logo").style.visibility = "hidden";
+  let harryName= document.createElement("h3");
+  harryName.textContent=harryData[i].name;
 
-document.getElementById("link-todos").addEventListener("click", enterTodos);
+  let harryimage= document.createElement("img");
+  Image.src = harryData[i].image;
 
-function enterTodos() {
-  document.getElementById("pantalla-inicio").style.display = "none";
-  document.getElementById("left-logo").style.visibility = "visible";
+  let harrySpecies= document.createElement("p");
+   harrySpecies.textContent= harryData[i].species;
 
-  
-  for (let i = 0; i < data.length; i++){
-    //variable para crear tarjeta
-    let characCard = document.createElement("div");
-    characCard.className = "hp-card";
-    characCard.id = "hp-card";
+  let harryAncestry = document.createElement ("p");
+   harryAncestry.textContent = harryData [i].ancestry;
 
-    //variable para crear nombre personaje
-    let characName = document.createElement("h4");
-    characName.textContent = data.name;
+   harryCard.appendChild(harryName);
+   harryCard.appendChild(harryimage);
 
-    //variable para crear imagen de personaje
-    let image = document.createElement("img");
-    image.src = data.image;
+   harryCard.appendChild(harrySpecies);
+   harryCard.appendChild(harryAncestry);
 
-    //variable fecha de nacimiento
-    let characDofB = document.createElement("h5");
-    characDofB.textContent = data.dateOfBirth;
-    characDofB.className = "dob";
+   document.getElementById("school").appendChild(harryCard).innerHTML;
 
-    //variable especie
-    let characSpec = document.createElement("h5");
-    characSpec.textContent = data.species;
-    characSpec.className = "species";
-
-    //variable linaje
-    let characAnces = document.createElement("h5");
-    characAnces.textContent = data.ancestry;
-    characAnces.className = "ancestry";
-
-    //variable patronus
-    let characPatro = document.createElement("h5");
-    characPatro.textContent = data.patronus;
-    characPatro.className = "patronus";
-
-    //variable varita
-    let characWand = document.createElement("h5");
-    characWand.textContent = data.wand;
-    characWand.className = "patronus";
-
-    //variable estado
-    let characStatus = document.createElement("h5");
-    characStatus.textContent = data.alive;
-    characStatus.className = "status";
-
-    //Dando valor a variables
-    characCard.appendChild(characName);
-    characCard.appendChild(image);
-    characCard.appendChild(characDofB);
-    characCard.appendChild(characSpec);
-    characCard.appendChild(characAnces);
-    characCard.appendChild(characPatro);
-    characCard.appendChild(characWand);
-    characCard.appendChild(characStatus);
-
-    //Mostrar tarjeta en HTLM section
-    document.getElementById("content-wrap").appendChild(characCard).innerHTML;
+    
   }
- 
-};
-
-
-
