@@ -14,7 +14,7 @@ for (let i=0; i< harryData.length; i++ ) {
   let harryimage= document.createElement("img");
   Image.src = harryData[i].image;
 
-  let harrySpecies= document.createElement("h4");
+  let harrySpecies= document.createElement("p");
    harrySpecies.textContent= harryData[i].species;
 
   let harryAncestry = document.createElement ("p");
@@ -27,4 +27,6 @@ for (let i=0; i< harryData.length; i++ ) {
    harryCard.appendChild(harryAncestry);
 
    document.getElementById("school").appendChild(harryCard).innerHTML;
-}
+
+    
+  }
