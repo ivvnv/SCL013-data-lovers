@@ -9,6 +9,8 @@
 </head>
 
 <body>
+
+ 
   <div id="root"></div>
 
   <div class="container">
@@ -16,10 +18,21 @@
       <input type="checkbox" id="menu-trigger" class="menu-trigger" checked />
       <label for="menu-trigger">&#9776;</label>
 
+  
+      
+
+
       <nav>
+
+        
+
         <ul class="slider-menu">
+          <div id="left-logo">
+            <img src="img/logohpwu2.svg" class="small-logo" id="small-logo">
+    
+          </div>
           <h5>explorar</h5>
-          <li class="categor"><a href="#todos">todos</a>
+          <li class="categor"><a href="#todos" id="link-todos">todos</a>
 
             <div class="dropdown">
               <input class="dropdown-toggle" type="text">
@@ -60,9 +73,19 @@
 
       <div class="content-wrap">
 
-        <img src="img/logohpwu.svg" class="big-logo">
+        <select name="" id="select-gender">
+          <option value="" disabled>Género</option>
+          <option value="Femenino">Femenino</option>
+          <option value="Masculino">Masculino</option>
+        </select>
+      
+        <div id="pantalla-inicio">
+        <img src="img/logohpwu.svg" class="big-logo" id="big-logo">
 
         <h3>guía para el novato absoluto</h3>
+        </div>
+
+        <div id="output"></div>
 
 
       </div>
