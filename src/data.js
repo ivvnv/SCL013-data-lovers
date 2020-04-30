@@ -1,12 +1,21 @@
-// estas funciones son de ejemplo
+//export const filtrado = (data, propiedad, valor ) => {
+ // return data.filter ((a) => (a[propiedad] === valor ));
 
-export const example = () => {
-  return 'example';
+//export const filterData = (data, condition) => {
+
+ // console.log(data);
+ // console.log(condition);
+//}
+
+
+const filterData = (datos, condition) => {
+  let newData = datos.filter((dato) => dato.house === condition);
+  return newData;
 };
 
-export const anotherExample = () => {
-  return 'OMG';
-};
 
 
 
+
+
+export default filterData;

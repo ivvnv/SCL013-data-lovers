@@ -10,6 +10,13 @@ const data = harryData; //NO SACAR de acá sale todo
 
 //When press <todos> on side menu
 
+document.getElementById("left-logo").style.visibility = "hidden";
+
+document.getElementById("link-todos").addEventListener("click", enterTodos);
+
+function enterTodos() {
+  document.getElementById("pantalla-inicio").style.display = "none";
+  document.getElementById("left-logo").style.visibility = "visible";
 
   
   for (let i = 0; i < data.length; i++){
@@ -70,7 +77,7 @@ const data = harryData; //NO SACAR de acá sale todo
     document.getElementById("content-wrap").appendChild(characCard).innerHTML;
   }
  
-
+};
 
 
 
