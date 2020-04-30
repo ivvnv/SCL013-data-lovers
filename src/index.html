@@ -15,36 +15,71 @@
     <div class="wrapper">
       <input type="checkbox" id="menu-trigger" class="menu-trigger" checked />
       <label for="menu-trigger">&#9776;</label>
-      <ul class="slider-menu">
-        <h5>explorar</h5>
-        <li class="categor"><a href="#todos">todos</a></li>
-        <li class="categor"><a href="#casas">casas    <hr></a>
-         <ul>
-         <li id="subcategoria1" value= "Griffyndor"><a href="#">Griffyndor</a></li>
-         </ul>
-        </li>
 
-        <li class="categor"><a href="#ocupacion">ocupación</a></li>
-        <li class="categor"><a href="#linaje">linaje</a></li>
-        <li class="categor"><a href="#otras">otras criaturas</a></li>
-      </ul>
-  
+      <nav>
+        <ul class="slider-menu">
+          <h5>explorar</h5>
+          <li class="categor"><a href="#todos" id="personajes">todos</a>
+
+            <div class="dropdown">
+              <input class="dropdown-toggle" type="text">
+              <div class="dropdown-text">casas</div>
+              <ul class="dropdown-content">
+                <li><a href="#">gryffindor</a></li>
+                <li><a href="#">slytherin</a></li>
+                <li><a href="#">ravenclaw</a></li>
+                <li><a href="#">hufflepuff</a></li>
+              </ul>
+            </div>
+
+          
+
+          <li class="categor"><a href="#ocupacion">ocupación</a>
+            <ul>
+              <li><a href="#">estudiante de hogwarts</a></li>
+              <li><a href="#">staff de hogwarts</a></li>
+              <li><a href="#">otra ocupación</a></li>
+            </ul>
+          </li>
+
+
+          <li class="categor"><a href="#linaje">linaje</a>
+            <ul>
+              <li><a href="#">sangre pura</a></li>
+              <li><a href="#">mestizo</a></li>
+              <li><a href="#">hijo de muggles</a></li>
+              <li><a href="#">squib</a></li>
+            </ul>
+          </li>
+
+
+          <li class="categor"><a href="#otras">otras criaturas</a></li>
+        </ul>
+
+        
+      </nav>
+      
+      <div> id = "listapersonajes"</div>
+        
+      
+      <section id="school" class="school">
+      </section>
 
 
       <div class="content-wrap">
-     
+
         <img src="img/logohpwu.svg" class="big-logo">
-  
+
         <h3>guía para el novato absoluto</h3>
-  
-    
-        </div>
-    
-    
+
+
       </div>
+
+
     </div>
-  
-    <script src="main.js" type="module"></script>
-  </body>
-  
-  </html>
+  </div>
+
+  <script src="main.js" type="module"></script>
+</body>
+
+</html>
