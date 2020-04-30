@@ -260,3 +260,10 @@ input[type=text] {
   visibility:visible;
   top: 2em;
 }
+
+.harryCards {
+
+display: flex;
+justify-content: center;
+align-items: center;
+}
