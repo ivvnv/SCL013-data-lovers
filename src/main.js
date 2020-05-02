@@ -11,18 +11,24 @@ function enterTodos() {
   document.getElementById("pantalla-inicio").style.display = "none";
   document.getElementById("left-logo").style.visibility = "visible";
 
-// card
+// cards
 for (let i=0; i< harryData.length; i++ ) {
 
-  let harryCard= document.createElement("div"); 
+  let harryCard = document.createElement("div"); 
   harryCard.className="harryCards";
   harryCard.id="harryCards";
 
+  let harryimage= document.createElement("img");
+  harryimage.className="harry-image";
+  harryimage.src = harryData[i].image;
+
   let harryName= document.createElement("h3");
+  harryName.className="harry-names";
   harryName.textContent=harryData[i].name;
 
-  let harryimage= document.createElement("img");
-  harryimage.src = harryData[i].image;
+  let harryDob= document.createElement("p");
+  harryDob.className="dateofb";
+  harryDob.textContent=harryData[i].dateOfBirth;
 
   let harrySpecies= document.createElement("p");
    harrySpecies.textContent= harryData[i].species;
@@ -31,11 +37,19 @@ for (let i=0; i< harryData.length; i++ ) {
   let harryAncestry = document.createElement("p");
    harryAncestry.textContent = harryData[i].ancestry;
 
-   harryCard.appendChild(harryName);
-   harryCard.appendChild(harryimage);
+   let harryPatronus = document.createElement("p");
+   harryPatronus.textContent = harryData[i].patronus;
 
+   let harryStatus = document.createElement("p");
+   harryStatus.textContent = harryData[i].alive;
+
+   harryCard.appendChild(harryimage);
+   harryCard.appendChild(harryName);
+   harryCard.appendChild(harryDob);
    harryCard.appendChild(harrySpecies);
    harryCard.appendChild(harryAncestry);
+   harryCard.appendChild(harryPatronus);
+  harryCard.appendChild(harryStatus);
 
    document.getElementById("results").appendChild(harryCard).innerHTML;
 

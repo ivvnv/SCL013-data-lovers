@@ -1,269 +1,224 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap');
-@-ms-viewport{
-    width: device-width;
-  }
 
-/* Navigation Menu */
+@-ms-viewport {
+  width: device-width;
+}
+
+/* Side Navigation Menu */
+
+.side-menu { /*contenedor de menu*/
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 2px;
+  height: 100%;
+  background: #ffffff;
+}
+
 .slider-menu {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 0;
-    background: #ffffff;
-    text-decoration: none;
-  }
-  
-  /* Navigation Menu Items */
-  .categor {
-    width: 200px;
-  }
-    
-    a {
-      display: block;
-      padding: 1em;
-      color: #fff;
-      font-size: 1.2em;
-      font-family: 'Playfair Display', serif;
-      text-decoration: none;
-    }
-  
-  .categor a:hover {
-    background: #28231B;
-    color: #D0B88E;
-  }
-  
-  
-  /* content wrapper */
-  .content-wrap {
- 
-  
-    background-image: url(img/background1.png);
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    padding: 4em;
-  }
-  
-  /* Nav Trigger */
-  .menu-trigger {
-    position: absolute;
-    clip: rect(0, 0, 0, 0);
-  }
-    
-  input[type=checkbox]:checked + label {
-      left: 215px;
-      
-    }
-
-    input[type=checkbox]:checked ~ .content-wrap {
-      left: 200px;
-      box-shadow: 0 0 15px 5px rgba(0,0,0,0.2);
-    }
-  
-  label[for="menu-trigger"] {
-    position: fixed;
-    left: 15px; 
-    top: 15px;
-    z-index: 2;
-    font-size: 30px;
-    line-height: 30px;
-    cursor: pointer;
-  }
-  
-  .menu-trigger + label, .content-wrap {
-    transition: left 0.2s;
-    -webkit-transition: 300ms ease-in all;
-    transition: 300ms ease-in all;
-  }
-  
-  
-  body {
-      /* Without this, the body has excess horizontal scroll when the menu is open */
-    overflow-x: hidden;
-  }
-  
-  
-  /* reset */
-  *,*:before,*:after{   
-    -webkit-box-sizing:border-box;
-    -moz-box-sizing:border-box;
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-  }
-
-  html, body { 
-    color: #28231B;
-    height: 100%; 
-    width: 100%; 
-  }
-
-  h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 400;
-    position: absolute;
-    text-align: center;
-    letter-spacing: 2px;
-    margin-top: 15%;
-
-  }
-
-  h5 {
-  font-family: 'Playfair Display', serif;
-    text-align: start;
-    font-size: x-small;
-    letter-spacing: 3px ;
-    margin-top: 15%;
-    text-transform: uppercase;
-    margin-left: 5%;
-    margin-bottom: 2%;
-
-}
-
-  li {
-    list-style: none;
-  }
-
-  a {
-    color: #28231B;
-    font-weight: 600;
-    text-decoration: none;
-  }
-
-.big-logo {
-width: 100%;
-height: 100%;
-
-}
-
-.left-logo {
-    display: flex;
-    justify-content: flex-start;
+  width: 210px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  text-decoration: none;
 }
 
 .small-logo {
 
-    width: 10%;
-    height: 10%;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 12%;
+  width: 60%;
 }
 
-/* casas estilo */
+h5 {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  font-size: x-small;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-top: 12%;
+  margin-bottom: 5%;
 
-.dropdown {
+}
+
+/* Navigation Menu Items */
+
+a {
+  display: block;
+  padding: 1em;
+  color: #fff;
+  font-size: 1.1em;
+  font-family: 'Playfair Display', serif;
+  text-decoration: none;
+}
+
+.categor a:hover {
+  background: #28231B;
+  color: #D0B88E;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #28231B;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* content wrapper, pantalla principal */
+
+.content-wrap {
+
+  background-image: url(img/background1.png);
   position: relative;
   display: flex;
-  text-align: left;
-  width: 200px;
-}
-
-.dropdown-text {
-  display: flex;
-  cursor: pointer;
-  position: absolute;
-  background-color: #eee;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-}
-
-.dropdown-text:after {
-  position: absolute;
-  right: 6px;
-  top: 15px;
-  content: '';
-  width: 0px;
-  height: 0px;
-  border-style: solid;
-  border-width: 5px 4px 0 4px;
-  border-color: #555 transparent transparent transparent;
-}
-
-.dropdown-text,
-.dropdown-content a {
-  color: #333;
-}
-
-.dropdown-toggle {
-  width: 100%;
-  z-index: 1;
-  cursor: pointer;
-  position: absolute;
+  height: 100%;
   top: 0;
-  border: none;
-  padding: 0;
-  margin: 0 0 0 1px;
-  background: transparent;
-  height: 34px;
-  width: 100%;
+  left: 0;
+  z-index: 1;
+  padding: 1em;
+  padding-top: 3em;
   
 }
 
-input[type=text] {
-  width: 200px;
 
-    display: block;
-    padding: 1em;
-    color: #fff;
-    font-size: 1.2em;
-    font-family: 'Playfair Display', serif;
-    text-decoration: none;
+/* Trigger for Burger icon */
 
-  
-}
-.dropdown-toggle:focus {
-  outline: 0;
-}
-
-.dropdown-content {
-  -webkit-transition: all .25s ease;
-  -moz-transition: all .25s ease;
-  -ms-transition: all .25s ease;
-  -o-transition: all .25s ease;
-  transition: all .25s ease;
-  list-style-type: none;
+.menu-trigger {
   position: absolute;
-  display: flex;
-  flex-direction: column;
-  visibility:hidden;
-  border-radius: 3px;
-  text-indent: 10px;
+  clip: rect(0, 0, 0, 0);
+}
+
+input[type=checkbox]:checked+label {
+  left: 215px;
+
+}
+
+input[type=checkbox]:checked~.content-wrap {
+  left: 200px;
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+}
+
+label[for="menu-trigger"] {
+  position: fixed;
+  left: 15px;
+  top: 15px;
+  z-index: 2;
+  font-size: 30px;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+.menu-trigger+label,
+.content-wrap {
+  transition: left 0.2s;
+  -webkit-transition: 300ms ease-in all;
+  transition: 300ms ease-in all;
+}
+
+
+body {
+  /* Without this, the body has excess horizontal scroll when the menu is open */
+  overflow-x: hidden;
+}
+
+
+/* reset */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+html,
+body {
+  color: #28231B;
+  height: 100%;
   width: 100%;
-  font-size: x-small;
+  
 }
 
-.dropdown-content a {
-  display: block;
+.pantalla-inicio {
+  
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+overflow:hidden;
+
 }
 
-.dropdown-content a:hover {
-  background: #e8e8e8;
+.big-logo {
+  
+
+}
+
+h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 130%;
+  
 }
 
 
-.dropdown-toggle:hover ~ .dropdown-text,
-.dropdown-toggle:focus ~ .dropdown-text {
-  background-color: #e8e8e8;
-}
+/* contenido que va apareciendo en la pantalla content-wrap */
 
-
-.dropdown-content:hover,
-.dropdown-toggle:focus ~ .dropdown-content {
-  opacity: 1;
-  visibility:visible;
-  top: 2em;
+.results {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  flex: 0 0 900px;
+ 
+  
 }
 
 .harryCards {
-
-display: flex;
-justify-content: center;
-align-items: center;
+  font-size: 12px;
+  margin: 1%;
+  width: 200px;
+  height: 280px;
+  text-align: center; 
+  border-radius: 4%;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  
 }
+
+.harry-image { /* fotos personajes*/
+  max-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  vertical-align: bottom; 
+  border-radius: 4%;
+
+}
+
+.harry-names { /*nombre personajes*/
+color: white;
+text-shadow: 1px 5px 5px #000;
+
+}
+
+
