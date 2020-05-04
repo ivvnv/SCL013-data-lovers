@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+sc<!DOCTYPE html>
 <html>
 
 <head>
@@ -10,42 +10,35 @@
 
 <body>
 
- 
+
   <div id="root"></div>
 
-  <div class="container">
-    <div class="wrapper">
-      <input type="checkbox" id="menu-trigger" class="menu-trigger" checked />
-      <label for="menu-trigger">&#9776;</label>
-
-  
-      
+  <div class="container"> <!-- entire page -->
+    <input type="checkbox" id="menu-trigger" class="menu-trigger" checked />
+    <label for="menu-trigger">&#9776;</label>
 
 
-      <nav>
-
-        
-
-        <ul class="slider-menu">
-          <div id="left-logo">
-            <img src="img/logohpwu2.svg" class="small-logo" id="small-logo">
+    <nav> <!-- side menu -->
+    <div class="side-menu" id="side-menu">
+     <ul class="slider-menu">
+      <a href="index.html">
+      <img src="img/logohpwu2.svg" class="small-logo" id="left-logo">
+      </a>
     
-          </div>
-          <h5>explorar</h5>
-          <li class="categor"><a href="#todos" id="link-todos">todos</a>
 
-            <div class="dropdown">
-              <input class="dropdown-toggle" type="text">
-              <div class="dropdown-text">casas</div>
-              <ul class="dropdown-content">
-                <li><a href="#">gryffindor</a></li>
-                <li><a href="#">slytherin</a></li>
-                <li><a href="#">ravenclaw</a></li>
-                <li><a href="#">hufflepuff</a></li>
-              </ul>
-            </div>
+      <h5>explorar</h5>
+      <li class="categor"><a href="#todos" id="link-todos">todos</a>
 
-          
+        <li class="categor"><a href="#casas"  id="casas">casas</a>
+          <ul>
+            <li id="categoria1"><a  href="#">gryffindor</a></li>
+            <li id="categoria2"><a href="#">slytherin</a></li>
+            <li id="categoria3"><a href="#">ravenclaw</a></li>
+            <li id="categoria4"><a href="#">hufflepuff</a></li>
+          </ul>
+        </li>
+
+
 
           <li class="categor"><a href="#ocupacion">ocupación</a>
             <ul>
@@ -69,39 +62,45 @@
           <li class="categor"><a href="#otras">otras criaturas</a></li>
         </ul>
 
-        
-      </nav>
-      
-      <div> id = "listapersonajes"</div>
-        
-      
-      <section id="school" class="school">
-      </section>
+
+      </div>
+    </nav>
 
 
-      <div class="content-wrap">
 
+
+
+
+    <div class="content-wrap">
+
+      <!-- <div class="selector">
         <select name="" id="select-gender">
-          <option value="" disabled>Género</option>
-          <option value="Femenino">Femenino</option>
-          <option value="Masculino">Masculino</option>
-        </select>
-      
-        <div id="pantalla-inicio">
+        <option value="" disabled>Género</option>
+        <option value="Femenino">Femenino</option>
+        <option value="Masculino">Masculino</option>
+      </select>
+      </div> -->
+
+      <div id="pantalla-inicio" class="pantalla-inicio">
         <img src="img/logohpwu.svg" class="big-logo" id="big-logo">
 
         <h3>guía para el novato absoluto</h3>
-        </div>
-
-        <div id="results"></div>
-
       </div>
 
+      <!-- Tarjetas -->
+      <section id="results" class="results">
+      </section>
 
     </div>
+
+
+
   </div>
+  
+
 
   <script src="main.js" type="module"></script>
+  <script src="data.js" type="module"></script>
 </body>
 
 </html>
