@@ -13,14 +13,15 @@ const seleccionadoH = houseH(harryData)
 
 //When press <todos> on side menu
 
-document.getElementById("left-logo").style.visibility = "hidden";
+document.getElementById("left-logo").style.visibility= "hidden";
 
 document.getElementById("link-todos").addEventListener("click", enterTodos);
 
 
 function enterTodos() {
-  document.getElementById("pantalla-inicio").style.display = "none";
+  
   document.getElementById("left-logo").style.visibility = "visible";
+  
 
 // cards
 for (let i=0; i< harryData.length; i++ ) {
