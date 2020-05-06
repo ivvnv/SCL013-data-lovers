@@ -1,12 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap");
 
 @-ms-viewport {
   width: device-width;
 }
 
 /* Side Navigation Menu */
+.item ul, input[type="checkbox"] {
+  display: none;
+  color: #28231b;
+}
 
-.side-menu { /*contenedor de menu*/
+.item {
+font-size: x-large;
+max-width: 500px;
+  margin: auto;
+}
+
+
+#menu:checked ~ .multi-level, .item input:checked ~ ul {
+  display: block;
+}
+
+/*Arrow*/
+
+.arrow {
+  width: 12px;
+  height: 12px;
+  vertical-align: middle;
+  float: right;
+  z-index: 0;
+  margin: 17px 1em 0 2em;
+}
+
+.item input + .arrow {
+  transform: rotate(-90deg);
+  transition: 0.1s;
+}
+.item input:checked + .arrow {
+  transform: rotate(0deg);
+  transition: 0.1s;
+}
+
+
+/*Styles*/
+
+label:hover {
+  cursor: pointer;
+}
+
+label {
+  width: 100%;
+  display: block;
+  position: relative;
+  max-width: 500px;
+  margin: auto;
+}
+
+
+.nav ul, .nav li, label {
+  line-height: 50px;
+ 
+  list-style: none;
+ 
+  width: 100%;
+}
+
+label[for=A], label[for=B], label[for=C] {
+  color: #28231b;
+  text-decoration: none;
+  padding: 0 0.6em;
+  font-weight: 400;
+  font-size: 100%;
+}
+
+label[for=A]:hover, label[for=B]:hover, label[for=C]:hover {
+background: #28231B;
+  color: #D0B88E;
+}
+
+.item ul {
+  padding: 0 0.25em;
+}
+
+
+.side-menu {
+  /*contenedor de menu*/
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -29,54 +107,79 @@
 }
 
 .small-logo {
-
   display: flex;
   margin: 0 auto;
   margin-top: 12%;
   width: 60%;
 }
 
+
+
 h5 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   text-align: center;
   font-size: x-small;
   letter-spacing: 3px;
   text-transform: uppercase;
   margin-top: 12%;
-  margin-bottom: 5%;
-
+  margin-bottom: 9%;
 }
 
 /* Navigation Menu Items */
 
 a {
   display: block;
-  padding: 1em;
-  color: #fff;
-  font-size: 1.1em;
-  font-family: 'Playfair Display', serif;
+  padding: 0.1em;
+  margin: 0.4em;
+ 
+  font-family: "Playfair Display", serif;
   text-decoration: none;
+  color: #28231b;
+  font-weight: 500;
 }
 
-.categor a:hover {
+
+
+#link-todos:hover, #link-otras:hover {
   background: #28231B;
   color: #D0B88E;
+margin: 0;
+  text-decoration: none;
+
 }
+
+a#gry, a#sly, a#rav, a#huf {
+  color:#28231b;
+  font-size: small;
+  margin-left: 34px;
+}
+
+a#est, a#sta, a#otr {
+  color:#28231b;
+  font-size: small;
+  margin-left: 34px;
+}
+
+a#san, a#mes, a#hij, a#squ {
+  color:#28231b;
+  font-size: small;
+  margin-left: 34px;
+}
+
+/* .categor a:hover {
+  background: #28231b;
+  color: #d0b88e;
+} */
 
 li {
   list-style: none;
 }
 
-a {
-  color: #28231B;
-  font-weight: 500;
-  text-decoration: none;
-}
+
 
 /* content wrapper, pantalla principal */
 
 .content-wrap {
-
   background-image: url(img/background1.png);
   position: relative;
   display: flex;
@@ -90,6 +193,7 @@ a {
   padding: 1em;
   padding-top: 3em;
   
+  
 }
 
 
@@ -100,12 +204,11 @@ a {
   clip: rect(0, 0, 0, 0);
 }
 
-input[type=checkbox]:checked+label {
+input[type="checkbox"]:checked + label {
   left: 215px;
-
 }
 
-input[type=checkbox]:checked~.content-wrap {
+input[type="checkbox"]:checked ~ .content-wrap {
   left: 200px;
   box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
 }
@@ -120,19 +223,17 @@ label[for="menu-trigger"] {
   cursor: pointer;
 }
 
-.menu-trigger+label,
+.menu-trigger + label,
 .content-wrap {
   transition: left 0.2s;
   -webkit-transition: 300ms ease-in all;
   transition: 300ms ease-in all;
 }
 
-
 body {
   /* Without this, the body has excess horizontal scroll when the menu is open */
   overflow-x: hidden;
 }
-
 
 /* reset */
 *,
@@ -145,39 +246,45 @@ body {
   padding: 0;
 }
 
-
 html,
 body {
-  color: #28231B;
+  color: #28231b;
   height: 100%;
   width: 100%;
-  
+
 }
 
 .pantalla-inicio {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 89vh;
+  max-width: 100%;
   
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-overflow:hidden;
+ 
 
 }
 
 .big-logo {
+  position: relative;
+  top: 50%;
+  left: 100%;
+  margin-top: 10vh;
   
-
+  
 }
 
 h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-weight: 500;
   text-align: center;
   letter-spacing: 2px;
   font-size: 130%;
+  position: relative;
+  top: 10%;
+  left: 100%;
   
 }
-
 
 /* contenido que va apareciendo en la pantalla content-wrap */
 
@@ -191,8 +298,6 @@ h3 {
   align-content: center;
   text-align: center;
   flex: 0 0 900px;
- 
-  
 }
 
 .harryCards {
@@ -200,25 +305,96 @@ h3 {
   margin: 1%;
   width: 200px;
   height: 280px;
-  text-align: center; 
+  text-align: center;
   border-radius: 4%;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
-  
+  position: relative;
 }
 
-.harry-image { /* fotos personajes*/
+.harry-image {
+  /* fotos personajes*/
   max-height: 100%;
   min-width: 100%;
-  object-fit: cover;
-  vertical-align: bottom; 
   border-radius: 4%;
+  position: relative;
+  object-fit: cover;
+  vertical-align: bottom;
+  object-position: 50% 50%;
+  width:100%;
+  height: 280px;
+}
+
+.harry-names {
+  /*nombre personajes*/
+  color: white;
+  position: absolute;
+  text-shadow: 1px 5px 5px #000;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: x-small;
+  letter-spacing: 0.2em;
+ 
+}
+
+
+/* modal */
+
+.button {
+  background: #fff;
+  padding: 1em 2em;
+  color: #D0B88E;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #28231B;
+}
+
+.modal {
+display:none;
+position: fixed;
+z-index: 1;
+left: 0;
+top: 0;
+height: 100%;
+width: 100%;
+overflow: auto;
+background-color: rgba(0, 0, 0, 0.7);
 
 }
 
-.harry-names { /*nombre personajes*/
-color: white;
-text-shadow: 1px 5px 5px #000;
+.modal-content {
+background-color: #f4f4f4;
+margin: 20% auto;
+padding: 40px;
+width: 30%;
+box-shadow:  0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+border-radius: 3px;
+animation-name: modalopen;
+animation-duration: var(--modal-duration);
 
 }
 
+.closeBtn {
+color: #28231b;
+float: right;
+font-size: 30px;
 
+}
+
+.closeBtn:hover,.closeBtn:focus {
+  color: #D0B88E;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes modalopen{
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
