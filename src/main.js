@@ -78,13 +78,16 @@ for (let i=0; i< harryData.length; i++ ) {
   harryCard.appendChild(harryStatus);
 
    document.getElementById("results").appendChild(harryCard).innerHTML;
-
     
   }}
 
   let results = document.getElementById("results");
    
   document.getElementById("gry").addEventListener("click", ()=>{
+    var div = document.getElementById('results');
+while(div.firstChild){
+    div.removeChild(div.firstChild);
+}
     document.getElementById("pantalla-inicio").style.display = "none";
     document.getElementById("left-logo").style.visibility = "visible";
 
@@ -104,6 +107,10 @@ for (let i=0; i< harryData.length; i++ ) {
     }
 })
      document.getElementById("sly").addEventListener("click", ()=>{
+      var div = document.getElementById('results');
+      while(div.firstChild){
+          div.removeChild(div.firstChild);
+      }
       document.getElementById("pantalla-inicio").style.display = "none";
     let houseSlytherin = seleccionadoS;
     for (let i=0; i <houseSlytherin.length; i++){
@@ -122,6 +129,10 @@ for (let i=0; i< harryData.length; i++ ) {
 })
 
 document.getElementById("rav").addEventListener("click", ()=>{
+  var div = document.getElementById('results');
+      while(div.firstChild){
+          div.removeChild(div.firstChild);
+      }
   document.getElementById("pantalla-inicio").style.display = "none";
   document.getElementById("left-logo").style.visibility = "visible";
   let houseRavenclaw = seleccionadoR;
@@ -139,6 +150,10 @@ document.getElementById("rav").addEventListener("click", ()=>{
   }
 })
 document.getElementById("huf").addEventListener("click", ()=>{
+  var div = document.getElementById('results');
+      while(div.firstChild){
+          div.removeChild(div.firstChild);
+      }
   document.getElementById("pantalla-inicio").style.display = "none";
   document.getElementById("left-logo").style.visibility = "visible";
   let houseHufflepuff = seleccionadoH;
@@ -159,6 +174,10 @@ document.getElementById("huf").addEventListener("click", ()=>{
 
 //Seleccionador linaje
 document.getElementById("san").addEventListener("click", ()=>{
+  var div = document.getElementById('results');
+      while(div.firstChild){
+          div.removeChild(div.firstChild);
+      }
   document.getElementById("pantalla-inicio").style.display = "none";
   document.getElementById("left-logo").style.visibility = "visible";
   let pureblood = seleccionadoPura;
@@ -178,6 +197,10 @@ document.getElementById("san").addEventListener("click", ()=>{
 )
 
 document.getElementById("mes").addEventListener("click", ()=>{
+  var div = document.getElementById('results');
+      while(div.firstChild){
+          div.removeChild(div.firstChild);
+      }
   document.getElementById("left-logo").style.visibility = "visible";
   document.getElementById("pantalla-inicio").style.display = "none";
   let mestizo = seleccionadoMestizo;
@@ -196,6 +219,10 @@ document.getElementById("mes").addEventListener("click", ()=>{
 })
 
 document.getElementById("hij").addEventListener("click", ()=>{
+  var div = document.getElementById('results');
+      while(div.firstChild){
+          div.removeChild(div.firstChild);
+      }
   document.getElementById("pantalla-inicio").style.display = "none";
   let muggleborn = seleccionadoSucia;
   for (let i=0; i<muggleborn.length; i++){
@@ -213,6 +240,10 @@ document.getElementById("hij").addEventListener("click", ()=>{
 })
 
 document.getElementById("squ").addEventListener("click",()=>{
+  var div = document.getElementById('results');
+      while(div.firstChild){
+          div.removeChild(div.firstChild);
+      }
   document.getElementById("left-logo").style.visibility = "visible";
   document.getElementById("pantalla-inicio").style.display = "none";
   let squib= seleccionadoSquib;
