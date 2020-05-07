@@ -7,8 +7,21 @@ import {houseR} from './data.js';
 const seleccionadoR = houseR(harryData)
 import {houseH} from './data.js';
 const seleccionadoH = houseH(harryData)
+import {san} from './data.js';
+const seleccionadoPura= san(harryData)
+import {mes} from './data.js';
+const seleccionadoMestizo = mes(harryData)
+import {hij} from './data.js';
+const seleccionadoSucia = hij(harryData)
+//import {squ} from './data.js';
+//const seleccionadoSquib = squ (harryData)  rompe el codigo :(
 
 //console.log(seleccionadoG)
+
+// import {sortArrAtoZ} from './data.js';
+// const ordenarAtoZ = sortArrAtoZ(harryData)
+// import {sortArrZtoA} from './data.js';
+// const ordenarZtoA = sortArrZtoA(harryData)
 
 
 //When press <todos> on side menu
@@ -21,6 +34,7 @@ document.getElementById("link-todos").addEventListener("click", enterTodos);
 function enterTodos() {
   
   document.getElementById("left-logo").style.visibility = "visible";
+  document.getElementById("pantalla-inicio").style.visibility= "hidden";
   
 
 // cards
@@ -109,6 +123,7 @@ for (let i=0; i< harryData.length; i++ ) {
 
 document.getElementById("rav").addEventListener("click", ()=>{
   document.getElementById("pantalla-inicio").style.display = "none";
+  document.getElementById("left-logo").style.visibility = "visible";
   let houseRavenclaw = seleccionadoR;
   for (let i=0; i <houseRavenclaw.length; i++){
     results.innerHTML += `<div class = "harryCards">
@@ -125,6 +140,7 @@ document.getElementById("rav").addEventListener("click", ()=>{
 })
 document.getElementById("huf").addEventListener("click", ()=>{
   document.getElementById("pantalla-inicio").style.display = "none";
+  document.getElementById("left-logo").style.visibility = "visible";
   let houseHufflepuff = seleccionadoH;
   for (let i=0; i <houseHufflepuff.length; i++){
     results.innerHTML += `<div class = "harryCards">
@@ -140,9 +156,86 @@ document.getElementById("huf").addEventListener("click", ()=>{
   }
 })
 
+
+//Seleccionador linaje
+document.getElementById("san").addEventListener("click", ()=>{
+  document.getElementById("pantalla-inicio").style.display = "none";
+  document.getElementById("left-logo").style.visibility = "visible";
+  let pureblood = seleccionadoPura;
+  for (let i=0; i<pureblood.length; i++){
+    results.innerHTML += `<div class = "harryCards">
+    <img class="harry-image" src= ${pureblood[i].image}>
+    <li class= "nombre" >Nombre: ${pureblood[i].name}
+    <li class= "descripcion" >Especie: ${pureblood[i].species}
+    <li class= "descripcion"> Casa: ${pureblood[i].house}
+    <li class= "descripcion"> Linaje: ${pureblood[i].ancestry}
+    <li class= "descripcion"> Varita: ${pureblood[i].wand.wood} ${pureblood[i].wand.core} ${pureblood[i].wand.length}
+    <li class= "descripcion"> Cumpleaños: ${pureblood[i].dateOfBirth}
+          </div>`
+    
+  }
+}
+)
+
+document.getElementById("mes").addEventListener("click", ()=>{
+  document.getElementById("left-logo").style.visibility = "visible";
+  document.getElementById("pantalla-inicio").style.display = "none";
+  let mestizo = seleccionadoMestizo;
+  for (let i=0; i<mes.length; i++){
+    results.innerHTML += `<div class = "harryCards">
+    <img class="harry-image" src= ${mestizo[i].image}>
+    <li class= "nombre" >Nombre: ${mestizo[i].name}
+    <li class= "descripcion" >Especie: ${mestizo[i].species}
+    <li class= "descripcion"> Casa: ${mestizo[i].house}
+    <li class= "descripcion"> Linaje: ${mestizo[i].ancestry}
+    <li class= "descripcion"> Varita: ${mestizo[i].wand.wood} ${mestizo[i].wand.core} ${mestizo[i].wand.length}
+    <li class= "descripcion"> Cumpleaños: ${mestizo[i].dateOfBirth}
+          </div>`
+    
+  }
+})
+
+document.getElementById("hij").addEventListener("click", ()=>{
+  document.getElementById("pantalla-inicio").style.display = "none";
+  let muggleborn = seleccionadoSucia;
+  for (let i=0; i<muggleborn.length; i++){
+    results.innerHTML += `<div class = "harryCards">
+    <img class="harry-image" src= ${muggleborn[i].image}>
+    <li class= "nombre" >Nombre: ${muggleborn[i].name}
+    <li class= "descripcion" >Especie: ${muggleborn[i].species}
+    <li class= "descripcion"> Casa: ${muggleborn[i].house}
+    <li class= "descripcion"> Linaje: ${muggleborn[i].ancestry}
+    <li class= "descripcion"> Varita: ${muggleborn[i].wand.wood} ${muggleborn[i].wand.core} ${muggleborn[i].wand.length}
+    <li class= "descripcion"> Cumpleaños: ${muggleborn[i].dateOfBirth}
+          </div>`
+    
+  }
+})
+
+document.getElementById("squ").addEventListener("click",()=>{
+  document.getElementById("left-logo").style.visibility = "visible";
+  document.getElementById("pantalla-inicio").style.display = "none";
+  let squib= seleccionadoSquib;
+  for (let i=0; i<squib.length; i++){
+    results.innerHTML += `<div class = "harryCards">
+    <img class="harry-image" src= ${squib[i].image}>
+    <li class= "nombre" >Nombre: ${squib[i].name}
+    <li class= "descripcion" >Especie: ${squib[i].species}
+    <li class= "descripcion"> Casa: ${squib[i].house}
+    <li class= "descripcion"> Linaje: ${squib[i].ancestry}
+    <li class= "descripcion"> Varita: ${squib[i].wand.wood} ${squib[i].wand.core} ${squib[i].wand.length}
+    <li class= "descripcion"> Cumpleaños: ${squib[i].dateOfBirth}
+     </div>`
+    
+  }
+  
+  });
 // var clickMeButton = document.createElement('button');
 // clickMeButton.id = 'modalBtn';
 // clickMeButton.className = 'button';
 // clickMeButton.innerHTML = 'M Á S';
 // results.appendChild(clickMeButton);
+
+
+
 

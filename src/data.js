@@ -26,8 +26,56 @@ export const houseG = (harryData) => {
         return houseRavenclaw;
    }
   
-  export const houseH = (potter) => {
-    let houseHufflepuff = potter.filter ( data =>
-       data.house === "Hufflepuff");
-       return houseHufflepuff;
-     }
+export const houseH = (harryData) => {
+let houseHufflepuff = harryData.filter ( data =>
+data.house === "Hufflepuff");
+return houseHufflepuff;
+   }
+
+   export const san = (harryData) => {
+    let pureblood= harryData.filter (data =>
+    data.ancestry === "pure-blood");
+     return pureblood;
+        }
+  export const mes = (harryData) => {
+   let mes = harryData.filter (data=>
+    data.ancestry === "half-blood");
+   return mes;
+       }     
+
+   export const hij = (harryData) => {
+   let muggleborn = harryData.filter ( data =>
+    data.ancestry === "muggleborn");
+    return muggleborn;
+      }    
+
+ export const squi = (harryData) => {
+   let squib = harryData.filter (data =>
+     data.ancestry === "squib");
+     return squib;
+      } 
+
+
+  export const sortArrAtoZ = (harryData) => {
+    let sortAtoZ = harryData.sort ((a, b) => {
+      if (a.name.toLowerCase() < b.name.toLowerCase()
+      ) return -1;
+      else if (a.name.toLowerCase() > b.name.toLowerCase()
+      ) return 1;
+      return 0;
+      
+    })
+  } //ME SALE EN LA CONSOLA EL SORT PERO NO EN EL DOCUMENTO
+  //por poblemas con sortAtoZ
+  
+
+  export const sortArrZtoA = (harryData) => {
+    let sortZtoA = harryData.sort ((a, b) => {
+      if (a.name.toLowerCase() > b.name.toLowerCase()
+      ) return -1;
+      else if (a.name.toLowerCase() < b.name.toLowerCase()
+      ) return 1;
+      return 0;
+      
+    })
+  }
