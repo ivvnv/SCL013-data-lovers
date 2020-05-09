@@ -25,19 +25,16 @@ const seleccionadoSucia = hij(harryData)
 
 
 //When press <todos> on side menu
-
 document.getElementById("left-logo").style.visibility= "hidden";
-
 document.getElementById("link-todos").addEventListener("click", enterTodos);
 
 
-function enterTodos() {
+function enterTodos() { //function to bring cards forward
   
-  document.getElementById("left-logo").style.visibility = "visible";
-  document.getElementById("pantalla-inicio").style.visibility= "hidden";
+document.getElementById("left-logo").style.visibility = "visible";
+document.getElementById("pantalla-inicio").style.visibility= "hidden";
   
-
-// cards
+// cards in <todos>
 for (let i=0; i< harryData.length; i++ ) {
 
   let harryCard = document.createElement("div"); 
@@ -52,42 +49,64 @@ for (let i=0; i< harryData.length; i++ ) {
   harryName.className="harry-names";
   harryName.textContent=harryData[i].name;
 
-  let harryDob= document.createElement("p");
-  harryDob.className="dateofb";
-  harryDob.textContent=harryData[i].dateOfBirth;
+  //Modal Button
+  let clickMeButton = document.createElement('button');
+  clickMeButton.id = 'modalBtn';
+  clickMeButton.className = 'button';
+  clickMeButton.type = "submit";
+  clickMeButton.style = "width:35px;height:35px;"
+  clickMeButton.innerHTML = `<img src="img/btn_feather.svg" />`;
 
-  let harrySpecies= document.createElement("p");
-   harrySpecies.textContent= harryData[i].species;
-   harrySpecies.className = "species";
+  harryCard.appendChild(harryimage);
+  harryCard.appendChild(harryName);
+  harryCard.appendChild(clickMeButton);
+  document.getElementById("results").appendChild(harryCard).innerHTML;
+  
+  }
+  //to finish eventlistener click and stop repeating info
+  document.getElementById("link-todos").removeEventListener("click", enterTodos);
+}
 
-  let harryAncestry = document.createElement("p");
-   harryAncestry.textContent = harryData[i].ancestry;
+// Open Modal
 
-   let harryPatronus = document.createElement("p");
-   harryPatronus.textContent = harryData[i].patronus;
+const modal = document.querySelector('#harryModal');
+const modalBtn = document.querySelector('#modal-btn');
+let cardContent = document.getElementById("modal-content");
 
-   let harryStatus = document.createElement("p");
-   harryStatus.textContent = harryData[i].alive;
+modalBtn.addEventListener('click', openModal);
 
-   harryCard.appendChild(harryimage);
-   harryCard.appendChild(harryName);
-   harryCard.appendChild(harryDob);
-   harryCard.appendChild(harrySpecies);
-   harryCard.appendChild(harryAncestry);
-   harryCard.appendChild(harryPatronus);
-  harryCard.appendChild(harryStatus);
+function openModal() {
+  modal.style.display = 'block';
 
-   document.getElementById("results").appendChild(harryCard).innerHTML;
-    
-  }}
+cardContent.innerHTML += `<span class="close">&times;</span>`;
+}
 
+//Close Modal
+
+const closeBtn = document.querySelector('.close');
+
+
+closeBtn.addEventListener('click', closeModal); //close with X
+window.addEventListener('click', outsideClick); //close click outside modal
+
+function closeModal() {
+  modal.style.display = 'none';
+}
+
+function outsideClick(e) {
+  if (e.target == modal) {
+    modal.style.display = 'none';
+  }
+}
+
+  //Categoría Gryffindor  
   let results = document.getElementById("results");
    
   document.getElementById("gry").addEventListener("click", ()=>{
     var div = document.getElementById('results');
-while(div.firstChild){
+    while(div.firstChild){
     div.removeChild(div.firstChild);
-}
+    }
     document.getElementById("pantalla-inicio").style.display = "none";
     document.getElementById("left-logo").style.visibility = "visible";
 
@@ -261,12 +280,4 @@ document.getElementById("squ").addEventListener("click",()=>{
   }
   
   });
-// var clickMeButton = document.createElement('button');
-// clickMeButton.id = 'modalBtn';
-// clickMeButton.className = 'button';
-// clickMeButton.innerHTML = 'M Á S';
-// results.appendChild(clickMeButton);
-
-
-
 
