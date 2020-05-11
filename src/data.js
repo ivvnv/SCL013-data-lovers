@@ -54,28 +54,58 @@ return houseHufflepuff;
      data.ancestry === "squib");
      return squib;
       } 
-
-
-  export const sortArrAtoZ = (harryData) => {
-    let sortAtoZ = harryData.sort ((a, b) => {
-      if (a.name.toLowerCase() < b.name.toLowerCase()
-      ) return -1;
-      else if (a.name.toLowerCase() > b.name.toLowerCase()
-      ) return 1;
-      return 0;
+   
+ export const est  = (harryData) => {
+    let students  = harryData.filter (data =>
+      data.hogwartsStudent  ===  true);
+      return students;
       
-    })
-  } //ME SALE EN LA CONSOLA EL SORT PERO NO EN EL DOCUMENTO
-  //por poblemas con sortAtoZ
+      }
+
+ export const sta  = (harryData) => {
+   let staff  = harryData.filter (data =>
+     data.hogwartsStaff  ===  true);
+      return staff;
+   }
+
+  export const otras = (harryData) => {
+    let criaturas = harryData.filter (data =>
+      data.species ===  "cat");
+      
+      return criaturas ;
+  }     
+
+
+  // export const sortAlphabetical = (dataArray, sortAtoZ) => {
+  //   let sortAtoZ = harryData.sort ((a, b) => {
+  //     if (a.name.toLowerCase() < b.name.toLowerCase()
+  //     ) return -1;
+  //     else if (a.name.toLowerCase() > b.name.toLowerCase()
+  //     ) return 1;
+  //     return 0;
+      
+  //   })
+  // } //ME SALE EN LA CONSOLA EL SORT PERO NO EN EL DOCUMENTO
+  // //por poblemas con sortAtoZ
   
 
-  export const sortArrZtoA = (harryData) => {
-    let sortZtoA = harryData.sort ((a, b) => {
-      if (a.name.toLowerCase() > b.name.toLowerCase()
-      ) return -1;
-      else if (a.name.toLowerCase() < b.name.toLowerCase()
-      ) return 1;
-      return 0;
+  // export const sortAlphabetical = (dataArray, sortZtoA) => {
+  //   let sortZtoA = harryData.sort ((a, b) => {
+  //     if (a.name.toLowerCase() > b.name.toLowerCase()
+  //     ) return -1;
+  //     else if (a.name.toLowerCase() < b.name.toLowerCase()
+  //     ) return 1;
+  //     return 0;
       
-    })
-  }
+  //   })
+  // }
+
+// //A to Z
+//   harryData.sort(function(a, b) {
+//     return a.name.toLowerCase().localeCompare(b.name.toLowerCase());
+//  });
+
+//  //Z to A
+//  harryData.sort(function(a, b) {
+//   return b.name.toLowerCase().localeCompare(a.name.toLowerCase());
+// });

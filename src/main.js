@@ -13,16 +13,21 @@ import {mes} from './data.js';
 const seleccionadoMestizo = mes(harryData)
 import {hij} from './data.js';
 const seleccionadoSucia = hij(harryData)
+import {squi} from './data.js';
+const seleccionadoSquib = squi (harryData)  
+import {est} from './data.js';
+const seleccionadoE = est (harryData)
+import {sta} from './data.js';
+const seleccionadoST = sta (harryData)
+import {otras} from './data.js';
+const seleccionadoCriaturas = otras (harryData)
+
+let results = document.getElementById("results");
+
 //import {squ} from './data.js';
 //const seleccionadoSquib = squ (harryData)  rompe el codigo :(
 
 //console.log(seleccionadoG)
-
-// import {sortArrAtoZ} from './data.js';
-// const ordenarAtoZ = sortArrAtoZ(harryData)
-// import {sortArrZtoA} from './data.js';
-// const ordenarZtoA = sortArrZtoA(harryData)
-
 
 //When press <todos> on side menu
 document.getElementById("left-logo").style.visibility= "hidden";
@@ -53,59 +58,73 @@ for (let i=0; i< harryData.length; i++ ) {
   let clickMeButton = document.createElement('button');
   clickMeButton.id = 'modalBtn';
   clickMeButton.className = 'button';
-  clickMeButton.type = "submit";
   clickMeButton.style = "width:35px;height:35px;"
   clickMeButton.innerHTML = `<img src="img/btn_feather.svg" />`;
+  
 
   harryCard.appendChild(harryimage);
   harryCard.appendChild(harryName);
   harryCard.appendChild(clickMeButton);
   document.getElementById("results").appendChild(harryCard).innerHTML;
+  document.getElementById("modalBtn").onclick = createModal;
   
-  }
+  
   //to finish eventlistener click and stop repeating info
   document.getElementById("link-todos").removeEventListener("click", enterTodos);
-}
+}}
 
-// Open Modal
+//Open Modal
 
-const modal = document.querySelector('#harryModal');
-const modalBtn = document.querySelector('#modal-btn');
-let cardContent = document.getElementById("modal-content");
-
-modalBtn.addEventListener('click', openModal);
-
-function openModal() {
-  modal.style.display = 'block';
-
-cardContent.innerHTML += `<span class="close">&times;</span>`;
-}
-
-//Close Modal
-
-const closeBtn = document.querySelector('.close');
-
-
-closeBtn.addEventListener('click', closeModal); //close with X
-window.addEventListener('click', outsideClick); //close click outside modal
-
-function closeModal() {
+function createModal() {
+  const modal = document.querySelector('#harryModal');
+  const modalBtn = document.querySelector('#modalBtn');
+  let cardContent = document.getElementById("modal-content");
   modal.style.display = 'none';
+
+  for(let i=0; i<modalBtn.length; i++){
+    let charInfo = modalBtn.button[i]; //guardamos cada boton de modal en una variable con posición i
+
+    charInfo.addEventListener("click", () => {
+    modal.style.display = 'block';  //al hacer click traemos el modal general
+    cardContent.innerHTML += `<span class="close">&times;</span>
+    <p>Some text. Some text. Some text.</p>`;
+
+    const closeBtn = document.querySelector('.close');
+    closeBtn.addEventListener("click", () => {
+      modal.style.display = 'none';
+      cardContent.innerHTML = "";
+    });
+  } );
+}
 }
 
-function outsideClick(e) {
-  if (e.target == modal) {
-    modal.style.display = 'none';
-  }
-}
+// //Selector A-Z
+
+// const select = document.getElementById("select");
+
+// select.addEventListener("change", () => {
+//   results.innerHTML += "";
+//   let sortAtoZ = select.options[select.selectedIndex].text;
+//   let sortResult = sortAlphabetical(harryData, sortAtoZ)
+
+//   for(let i = 0; sortResult.length; i++){
+//     results.innerHTML +=
+//     `<div class = "harryCards">
+//          <img class="harry-image" src= ${harryData[i].image}>
+//          <li class= "nombre" >Nombre: ${harryData[i].name}
+//          </div>`
+//   }
+// });
+
+
 
   //Categoría Gryffindor  
-  let results = document.getElementById("results");
+
    
   document.getElementById("gry").addEventListener("click", ()=>{
-    var div = document.getElementById('results');
-    while(div.firstChild){
-    div.removeChild(div.firstChild);
+    results = document.getElementById('results');
+    while(results.firstChild){
+    results.removeChild(results.firstChild);
     }
     document.getElementById("pantalla-inicio").style.display = "none";
     document.getElementById("left-logo").style.visibility = "visible";
@@ -125,11 +144,14 @@ function outsideClick(e) {
        // console.log(houseGryffindor)
     }
 })
+
+ //Categoría Slytherin  
+
      document.getElementById("sly").addEventListener("click", ()=>{
-      var div = document.getElementById('results');
-      while(div.firstChild){
-          div.removeChild(div.firstChild);
-      }
+      results = document.getElementById('results');
+    while(results.firstChild){
+    results.removeChild(results.firstChild);
+    }
       document.getElementById("pantalla-inicio").style.display = "none";
     let houseSlytherin = seleccionadoS;
     for (let i=0; i <houseSlytherin.length; i++){
@@ -147,11 +169,13 @@ function outsideClick(e) {
   }
 })
 
+//Categoría Ravenclaw
+
 document.getElementById("rav").addEventListener("click", ()=>{
-  var div = document.getElementById('results');
-      while(div.firstChild){
-          div.removeChild(div.firstChild);
-      }
+  results = document.getElementById('results');
+    while(results.firstChild){
+    results.removeChild(results.firstChild);
+    }
   document.getElementById("pantalla-inicio").style.display = "none";
   document.getElementById("left-logo").style.visibility = "visible";
   let houseRavenclaw = seleccionadoR;
@@ -168,11 +192,14 @@ document.getElementById("rav").addEventListener("click", ()=>{
      // console.log(houseRavenclaw)
   }
 })
+
+//Categoría Hufflepuff
+
 document.getElementById("huf").addEventListener("click", ()=>{
-  var div = document.getElementById('results');
-      while(div.firstChild){
-          div.removeChild(div.firstChild);
-      }
+  results = document.getElementById('results');
+    while(results.firstChild){
+    results.removeChild(results.firstChild);
+    }
   document.getElementById("pantalla-inicio").style.display = "none";
   document.getElementById("left-logo").style.visibility = "visible";
   let houseHufflepuff = seleccionadoH;
@@ -190,13 +217,62 @@ document.getElementById("huf").addEventListener("click", ()=>{
   }
 })
 
+//Categoría Estudiante
 
-//Seleccionador linaje
+document.getElementById("est").addEventListener ("click", ()=>{
+  results = document.getElementById('results');
+    while(results.firstChild){
+    results.removeChild(results.firstChild);
+    }
+  document.getElementById("pantalla-inicio").style.display = "none";
+  document.getElementById("left-logo").style.visibility = "visible";
+  
+  let students = seleccionadoE;
+  for (let i=0; i<students.length; i++){
+    results.innerHTML += `<div class = "harryCards">
+  <img class="harry-image" src= ${students[i].image}>
+  <li class= "nombre" >Nombre: ${students[i].name}
+  <li class= "descripcion" >Especie: ${students[i].species}
+  <li class= "descripcion"> Casa: ${students[i].house}
+  <li class= "descripcion"> Linaje: ${students[i].ancestry}
+  <li class= "descripcion"> Varita: ${students[i].wand.wood} ${students[i].wand.core} ${students[i].wand.length}
+  <li class= "descripcion"> Cumpleaños: ${students[i].dateOfBirth}
+        </div>`
+  
+}
+})
+
+//Categoría Staff
+
+document.getElementById("sta").addEventListener ("click", ()=>{
+  results = document.getElementById('results');
+    while(results.firstChild){
+    results.removeChild(results.firstChild);
+    }
+  document.getElementById("pantalla-inicio").style.display = "none";
+  document.getElementById("left-logo").style.visibility = "visible";
+  
+  let staff = seleccionadoST;
+  for (let i=0; i<staff.length; i++){
+    results.innerHTML += `<div class = "harryCards">
+  <img class="harry-image" src= ${staff[i].image}>
+  <li class= "nombre" >Nombre: ${staff[i].name}
+  <li class= "descripcion" >Especie: ${staff[i].species}
+  <li class= "descripcion"> Casa: ${staff[i].house}
+  <li class= "descripcion"> Linaje: ${staff[i].ancestry}
+  <li class= "descripcion"> Varita: ${staff[i].wand.wood} ${staff[i].wand.core} ${staff[i].wand.length}
+  <li class= "descripcion"> Cumpleaños: ${staff[i].dateOfBirth}
+        </div>`
+  
+}
+})
+
+//Categoría linaje: sangre pura
 document.getElementById("san").addEventListener("click", ()=>{
-  var div = document.getElementById('results');
-      while(div.firstChild){
-          div.removeChild(div.firstChild);
-      }
+  results = document.getElementById('results');
+    while(results.firstChild){
+    results.removeChild(results.firstChild);
+    }
   document.getElementById("pantalla-inicio").style.display = "none";
   document.getElementById("left-logo").style.visibility = "visible";
   let pureblood = seleccionadoPura;
@@ -210,16 +286,16 @@ document.getElementById("san").addEventListener("click", ()=>{
     <li class= "descripcion"> Varita: ${pureblood[i].wand.wood} ${pureblood[i].wand.core} ${pureblood[i].wand.length}
     <li class= "descripcion"> Cumpleaños: ${pureblood[i].dateOfBirth}
           </div>`
-    
   }
 }
 )
 
+//mestizo
 document.getElementById("mes").addEventListener("click", ()=>{
-  var div = document.getElementById('results');
-      while(div.firstChild){
-          div.removeChild(div.firstChild);
-      }
+  results = document.getElementById('results');
+    while(results.firstChild){
+    results.removeChild(results.firstChild);
+    }
   document.getElementById("left-logo").style.visibility = "visible";
   document.getElementById("pantalla-inicio").style.display = "none";
   let mestizo = seleccionadoMestizo;
@@ -233,15 +309,15 @@ document.getElementById("mes").addEventListener("click", ()=>{
     <li class= "descripcion"> Varita: ${mestizo[i].wand.wood} ${mestizo[i].wand.core} ${mestizo[i].wand.length}
     <li class= "descripcion"> Cumpleaños: ${mestizo[i].dateOfBirth}
           </div>`
-    
   }
 })
 
+//hijo de muggles
 document.getElementById("hij").addEventListener("click", ()=>{
-  var div = document.getElementById('results');
-      while(div.firstChild){
-          div.removeChild(div.firstChild);
-      }
+  results = document.getElementById('results');
+    while(results.firstChild){
+    results.removeChild(results.firstChild);
+    }
   document.getElementById("pantalla-inicio").style.display = "none";
   let muggleborn = seleccionadoSucia;
   for (let i=0; i<muggleborn.length; i++){
@@ -254,15 +330,15 @@ document.getElementById("hij").addEventListener("click", ()=>{
     <li class= "descripcion"> Varita: ${muggleborn[i].wand.wood} ${muggleborn[i].wand.core} ${muggleborn[i].wand.length}
     <li class= "descripcion"> Cumpleaños: ${muggleborn[i].dateOfBirth}
           </div>`
-    
   }
 })
 
+//squid
 document.getElementById("squ").addEventListener("click",()=>{
-  var div = document.getElementById('results');
-      while(div.firstChild){
-          div.removeChild(div.firstChild);
-      }
+  results = document.getElementById('results');
+    while(results.firstChild){
+    results.removeChild(results.firstChild);
+    }
   document.getElementById("left-logo").style.visibility = "visible";
   document.getElementById("pantalla-inicio").style.display = "none";
   let squib= seleccionadoSquib;
@@ -276,8 +352,26 @@ document.getElementById("squ").addEventListener("click",()=>{
     <li class= "descripcion"> Varita: ${squib[i].wand.wood} ${squib[i].wand.core} ${squib[i].wand.length}
     <li class= "descripcion"> Cumpleaños: ${squib[i].dateOfBirth}
      </div>`
-    
   }
-  
-  });
+  })
 
+  //Categoría Otras criaturas
+  document.getElementById("link-otras").addEventListener("click", ()=>{
+    results = document.getElementById('results');
+    while(results.firstChild){
+    results.removeChild(results.firstChild);
+    }
+    document.getElementById("pantalla-inicio").style.display = "none";
+    let criaturas  = seleccionadoCriaturas;
+    for (let i=0; i<criaturas.length; i++){
+      results.innerHTML += `<div class = "harryCards">
+      <img class="harry-image" src= ${criaturas[i].image}>
+      <li class= "nombre" >Nombre: ${criaturas[i].name}
+      <li class= "descripcion" >Especie: ${criaturas[i].species}
+      <li class= "descripcion"> Casa: ${criaturas[i].house}
+      <li class= "descripcion"> Linaje: ${criaturas[i].ancestry}
+      <li class= "descripcion"> Varita: ${criaturas[i].wand.wood} ${criaturas[i].wand.core} ${criaturas[i].wand.length}
+      <li class= "descripcion"> Cumpleaños: ${criaturas[i].dateOfBirth}
+            </div>`
+    }
+  })
