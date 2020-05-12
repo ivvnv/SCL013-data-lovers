@@ -70,11 +70,46 @@ return houseHufflepuff;
 
   export const otras = (harryData) => {
     let criaturas = harryData.filter (data =>
-      data.species ===  "cat");
+      data.species ===  "cat" || data.species === "half-giant" || data.species === "werewolf");
       
       return criaturas ;
   }     
 
+    //Ordena harry por nombre de la A a la Z
+export const orderharryAz = (harryData)=>{
+  const newDataArray = [];
+  for (let i = 0; i < harryData.length; i++) {
+    newDataArray.push(harryData[i]);
+  }
+  newDataArray.sort((a, b) => {
+    if (a.name > b.name) {
+      return 1;
+    }
+    else if (a.name < b.name) {
+      return -1;
+    }
+    return 0;
+  });
+  return newDataArray;
+};
+
+//Ordena harry por nombre de la Z a la A
+export const orderharryZa = (harryData)=>{
+  const newDataArray = [];
+  for (let i = 0; i < harryData.length; i ++) {
+    newDataArray.push(harryData[i]);
+  }
+  newDataArray.sort((a, b) => {
+    if (a.name > b.name) {
+      return -1;
+    }
+    else if (a.name < b.name) {
+      return 1;
+    }
+    return 0;
+  });
+  return newDataArray;
+};
 
   // export const sortAlphabetical = (dataArray, sortAtoZ) => {
   //   let sortAtoZ = harryData.sort ((a, b) => {

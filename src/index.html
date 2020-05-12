@@ -11,9 +11,6 @@
     <div id="root"></div>
 
     <div class="container">
-      <!-- entire page -->
-      <input type="checkbox" id="menu-trigger" class="menu-trigger" checked />
-      <label for="menu-trigger">&#9776;</label>
 
       <nav>
         <!-- side menu -->
@@ -58,7 +55,7 @@
           <img src="img/arrow.svg" class="arrow"><label for="C">linaje</label>
           
           <ul>
-            <a href="#" id="san">sangre pura</a></li>
+                <li><a href="#" id="san">sangre pura</a></li>
                 <li><a href="#" id="mes">mestizo</a></li>
                 <li><a href="#" id="hij">hijo de muggles</a></li>
                 <li><a href="#" id="squ">squib</a></li>
@@ -67,9 +64,15 @@
 
       <div class="item">
             <li class="wodropdown"><a href="#otras" id="link-otras">otras criaturas</a></li>
+            </div>
           
-        </div>
+        </ul>
+          </div>
       </nav>
+
+      <!-- entire page -->
+      <input type="checkbox" id="menu-trigger" class="menu-trigger" checked />
+      <label for="menu-trigger">&#9776;</label>
 
       <div class="content-wrap">
         <!-- <div class="selector">
@@ -89,11 +92,11 @@
         <!-- Tarjetas y filtros -->
         <section id="results" class="results">
 
-          <div class="dropdown dropdown-dark">
-            <select name="two" id= "select" class="dropdown-select">
-              <option value="">ordenar...</option>
-              <option value="1">A - Z</option>
-              <option value="2">Z - A</option>
+          <div class="dropdown dropdown-dark" id = "selector">
+            <select name="select" id= "select" class="dropdown-select">
+              <option value="">Ordenar...</option>
+              <option value="A-Z">A - Z</option>
+              <option value="Z-A">Z - A</option>
             </select>
           </div>
         
