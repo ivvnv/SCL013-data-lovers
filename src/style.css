@@ -187,6 +187,7 @@ li {
 
 input[type="checkbox"]:checked + label {
   left: 215px;
+  width: 30px;
 }
 
 input[type="checkbox"]:checked ~ .content-wrap {
@@ -387,7 +388,7 @@ font-size: 30px;
   width: 150px;
   border-radius: 5px;
   -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.08);
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 10px rgba(102, 67, 67, 0.08);
 }
 
 .dropdown:before, .dropdown:after {
@@ -466,8 +467,8 @@ font-size: 30px;
 }
 
 #selector {
-top: 5.3em;
-left: 1em;
+top: 1.2em;
+left: 5em;
 
 }
 

@@ -27,6 +27,7 @@ import {orderharryZa} from './data.js';
 const orderedDataZa = orderharryZa (harryData)
 
 //Global scope variables
+const data = harryData;
 let results = document.getElementById("results"); //screen that shows results made with functions
 let modal = document.querySelector('#harryModal'); //div modal html
 let modalContent = document.getElementById("modal-content"); // div modal content
@@ -108,9 +109,6 @@ document.getElementById("selector").style.display= "none";
 
 
 
-
-
-
 //Todos
 document.getElementById("link-todos").addEventListener("click", ()=>{
   while(results.firstChild){
@@ -120,22 +118,34 @@ document.getElementById("link-todos").addEventListener("click", ()=>{
   document.getElementById("left-logo").style.visibility = "visible";
   document.getElementById("selector").style.display= "block";
 
+  
 
   for (let i=0; i <harryData.length; i++){
       results.innerHTML +=
       `<div class = "harryCards">
        <img class="harry-image" src= ${harryData[i].image}>
        <h3 class= "harry-names" > ${harryData[i].name}</h3>
-       <button class="button" id="modalBtn-${i}" style = "width:35px;height:35px" >
-       <img src="img/btn_feather.svg"/ onclick="document.getElementById('harryModal').style.display='block'"></button>
+       <button class="button" id="modalBtn-${i}" style = "width:35px;height:35px" onclick="document.getElementById('harryModal').style.display='block'">
+       <img src="img/btn_feather.svg"/></button>
        </div>`
+
+
+      //  let modal = document.querySelector('#harryModal')
+      //  for (let i=0; i <modalBtn.length; i++){
+      //   modalContent.innerHTML +=
+      //   `<div class = "harryCards">
+       
+       
+
+       
+       
        modalContent.innerHTML +=
        `<li class= "descripcion"> ${harryData[i].dateOfBirth}
          <li class= "descripcion">Especie: ${harryData[i].species}
          <li class= "descripcion"> Casa: ${harryData[i].house}
          <li class= "descripcion"> Linaje: ${harryData[i].ancestry}
          <li class= "descripcion"> Varita: ${harryData[i].wand.wood} ${harryData[i].wand.core} ${harryData[i].wand.length}`
-     // console.log(houseGryffindor)
+}
      
 
        //Creating Modal Button Dynamically
@@ -148,7 +158,9 @@ document.getElementById("link-todos").addEventListener("click", ()=>{
 // harryCard.appendChild(clickMeButton)
 // document.getElementById("results").appendChild(harryCard).innerHTML;
   
-  }
+
+
+
 })
 
   //Filter by Houses
