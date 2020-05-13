@@ -28,70 +28,65 @@ const orderedDataZa = orderharryZa (harryData)
 
 //Global scope variables
 let results = document.getElementById("results"); //screen that shows results made with functions
+let modal = document.querySelector('#harryModal'); //div modal html
+let modalContent = document.getElementById("modal-content"); // div modal content
 
+window.addEventListener('click', outsideClick); // to quit modal with a click anywhere
+function outsideClick(e) {
+  if (e.target == modal) {
+    modal.style.display = 'none';
+  }
+}
 
 //How the page looks when you enter it
 document.getElementById("left-logo").style.visibility= "hidden";
 document.getElementById("selector").style.display= "none";
 
+// //When press <todos> on side menu
+// document.getElementById("link-todos").addEventListener("click", enterTodos);
 
-//When press <todos> on side menu
-document.getElementById("link-todos").addEventListener("click", enterTodos);
-
-function enterTodos() { //function to bring cards forward
+// function enterTodos() { //function to bring cards forward
   
-document.getElementById("left-logo").style.visibility = "visible";
-document.getElementById("pantalla-inicio").style.visibility= "hidden";
-document.getElementById("selector").style.display= "block";
+// document.getElementById("left-logo").style.visibility = "visible";
+// document.getElementById("pantalla-inicio").style.visibility= "hidden";
+// document.getElementById("selector").style.display= "block";
 
-  
-// cards in <todos>
-for (let i=0; i< harryData.length; i++ ) {
+// // cards in <todos>
+// for (let i=0; i< harryData.length; i++ ) {
 
-  let harryCard = document.createElement("div"); 
-  harryCard.className="harryCards";
-  harryCard.id="harryCards";
+//   let harryCard = document.createElement("div"); 
+//   harryCard.className="harryCards";
+//   harryCard.id="harryCards";
 
-  let harryimage= document.createElement("img");
-  harryimage.className="harry-image";
-  harryimage.src = harryData[i].image;
+//   let harryimage= document.createElement("img");
+//   harryimage.className="harry-image";
+//   harryimage.src = harryData[i].image;
 
-  let harryName= document.createElement("h3");
-  harryName.className="harry-names";
-  harryName.textContent=harryData[i].name;
+//   let harryName= document.createElement("h3");
+//   harryName.className="harry-names";
+//   harryName.textContent=harryData[i].name;  
 
-  //Modal Button
-  let clickMeButton = document.createElement('button');
-  clickMeButton.id = `modalBtn-${i}`;
-  clickMeButton.className = 'button';
-  clickMeButton.style = "width:35px;height:35px;"
-  clickMeButton.innerHTML = `<img src="img/btn_feather.svg" />`;
-  // clickMeButton.dataset.name =
-  // results.appendChild(clickMeButton)
-  // var botones = document.querySelectorAll(".button");
-  
-
-  harryCard.appendChild(harryimage);
-  harryCard.appendChild(harryName);
-  harryCard.appendChild(clickMeButton);
-  document.getElementById("results").appendChild(harryCard).innerHTML;
-  // document.getElementById("modalBtn").onclick = createModal;
+//   harryCard.appendChild(harryimage);
+//   harryCard.appendChild(harryName);
+//   harryCard.appendChild(clickMeButton);
+//   document.getElementById("results").appendChild(harryCard).innerHTML;
+//   // document.getElementById("modalBtn").onclick = createModal;
   
   
-  //to finish eventlistener click and stop repeating info
-  document.getElementById("link-todos").removeEventListener("click", enterTodos);
-}}
+//   //to finish eventlistener click and stop repeating info
+//   document.getElementById("link-todos").removeEventListener("click", enterTodos);
+// }}
 
 
 
-// //Open Modal
+//Open Modal
 
 // var botones = document.querySelectorAll(".button");
-// function createModal() {
+// function openModal() {
 //   const modal = document.querySelector('#harryModal');
-//   const modalBtn = document.querySelector('.button');
+//   const modalBtn = document.querySelectorAll('.button');
 //   let cardContent = document.getElementById("modal-content");
-//   modal.style.display = 'block';
+//   modal.style.display = 'none';
 
 //   for(let i=0; i<botones.length; i++){
 //     let charInfo = botones.harryData[i]; //guardamos cada boton de modal en una variable con posición i
@@ -110,25 +105,51 @@ for (let i=0; i< harryData.length; i++ ) {
 // }
 // }
 
-// //Selector A-Z
-
-// const select = document.getElementById("select");
-
-// select.addEventListener("change", () => {
-//   results.innerHTML += "";
-//   let sortAtoZ = select.options[select.selectedIndex].text;
-//   let sortResult = sortAlphabetical(harryData, sortAtoZ)
-
-//   for(let i = 0; sortResult.length; i++){
-//     results.innerHTML +=
-//     `<div class = "harryCards">
-//          <img class="harry-image" src= ${harryData[i].image}>
-//          <li class= "nombre" >Nombre: ${harryData[i].name}
-//          </div>`
-//   }
-// });
 
 
+
+
+
+
+//Todos
+document.getElementById("link-todos").addEventListener("click", ()=>{
+  while(results.firstChild){
+  results.removeChild(results.firstChild);
+  } //this clears the screen and make space for new cards
+  document.getElementById("pantalla-inicio").style.display = "none";
+  document.getElementById("left-logo").style.visibility = "visible";
+  document.getElementById("selector").style.display= "block";
+
+
+  for (let i=0; i <harryData.length; i++){
+      results.innerHTML +=
+      `<div class = "harryCards">
+       <img class="harry-image" src= ${harryData[i].image}>
+       <h3 class= "harry-names" > ${harryData[i].name}</h3>
+       <button class="button" id="modalBtn-${i}" style = "width:35px;height:35px" >
+       <img src="img/btn_feather.svg"/ onclick="document.getElementById('harryModal').style.display='block'"></button>
+       </div>`
+       modalContent.innerHTML +=
+       `<li class= "descripcion"> ${harryData[i].dateOfBirth}
+         <li class= "descripcion">Especie: ${harryData[i].species}
+         <li class= "descripcion"> Casa: ${harryData[i].house}
+         <li class= "descripcion"> Linaje: ${harryData[i].ancestry}
+         <li class= "descripcion"> Varita: ${harryData[i].wand.wood} ${harryData[i].wand.core} ${harryData[i].wand.length}`
+     // console.log(houseGryffindor)
+     
+
+       //Creating Modal Button Dynamically
+// let clickMeButton = document.createElement('button');
+// clickMeButton.id = `modalBtn-${i}`;
+// clickMeButton.className = 'button';
+// clickMeButton.style = "width:35px;height:35px;"
+// clickMeButton.innerHTML = `<img src="img/btn_feather.svg" />`;
+// // clickMeButton.dataset.name.innerHTML;
+// harryCard.appendChild(clickMeButton)
+// document.getElementById("results").appendChild(harryCard).innerHTML;
+  
+  }
+})
 
   //Filter by Houses
   //Gryffindor  
@@ -138,7 +159,7 @@ for (let i=0; i< harryData.length; i++ ) {
     } //this clears the screen and make space for new cards
     document.getElementById("pantalla-inicio").style.display = "none";
     document.getElementById("left-logo").style.visibility = "visible";
-
+    document.getElementById("selector").style.display= "none"; //solo funciona si se hace todos y dp gryff
 
     let houseGryffindor = seleccionadoG;
     for (let i=0; i <houseGryffindor.length; i++){
@@ -392,12 +413,12 @@ document.getElementById("squ").addEventListener("click",()=>{
     for (let i = 0; i < harryData.length; i++) {
       cardTemplate  += `<div class = "harryCards">
       <img class="harry-image" src= ${harryData[i].image}>
-      <li class= "nombre" >Nombre: ${harryData[i].name}
+      <h3 class= "harry-names" >${harryData[i].name}</h3>
       </div>`
       results.innerHTML = cardTemplate
     }}
 
-    const  selectElement=document.querySelector(".dropdown-select");
+    const selectElement=document.querySelector(".dropdown-select");
   selectElement.addEventListener("change",(e) => {
     const resultado =`${e.target.value}`;
 
@@ -408,3 +429,11 @@ document.getElementById("squ").addEventListener("click",()=>{
       viewAllharry(orderedDataZa);
     }
   }); 
+
+
+
+
+
+
+
+

@@ -90,21 +90,23 @@
         </div>
 
         <!-- Tarjetas y filtros -->
-        <section id="results" class="results">
+        <div class="dropdown dropdown-dark" id = "selector">
+          <select name="select" id= "select" class="dropdown-select">
+            <option value="">Ordenar...</option>
+            <option value="A-Z">A - Z</option>
+            <option value="Z-A">Z - A</option>
+          </select>
+        </div>
 
-          <div class="dropdown dropdown-dark" id = "selector">
-            <select name="select" id= "select" class="dropdown-select">
-              <option value="">Ordenar...</option>
-              <option value="A-Z">A - Z</option>
-              <option value="Z-A">Z - A</option>
-            </select>
+        <div id="harryModal" class="modal">
+          <div id="modal-content">
+            <span class="close" onclick="document.getElementById('harryModal').style.display='none'">&times;</span>
           </div>
+        </div>
+
+        <section id="results" class="results">
         
-          <div id="harryModal" class="modal">
-            <div id="modal-content">
-              <!-- <span class="close">&times;</span> -->
-            </div>
-          </div>
+          
 
         </section>
       </div>
