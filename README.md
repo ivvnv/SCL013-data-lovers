@@ -12,7 +12,8 @@
 * [6. Prototipo alta fidelidad](#6-Prototipo-alta-fidelidad)
 * [7. Cómo utilzar la plataforma](#7-Cómo-utilizar-la-plataforma)
 * [8. Testeos](#8-Testeos)
-* [9. Checklist](#9-checklist)
+* [9. Pruebas Unitarias](#9-Pruebas-Unitarias)
+* [10. Checklist](#10-checklist)
 
 ***
 
@@ -92,12 +93,12 @@ Como dato: Tuvimos nuestro primer feedback de parte de nuestro squad.
 **Tener en consideración:**
 No salen todos los personajes del juego.
 
-## 8.Testeos
+## 8. Testeos
 
 Nuestros testeos fueron hechos por Maze, donde pudimos sacar informes porcentuales de usuabilidad, acceso directo y ruta esperada.
 
 
-Porcentajes de Usuabilidad Testeos
+**Porcentajes de Usuabilidad Testeos**
 
 ![Usuabilidad](https://raw.githubusercontent.com/ivvnv/SCL013-data-lovers/master/src/img/maze1.png)
 ![Acceso directo](https://raw.githubusercontent.com/ivvnv/SCL013-data-lovers/master/src/img/maze2.png)
@@ -109,7 +110,7 @@ Porcentajes de Usuabilidad Testeos
 
 
 ***
-## 9. Tests Unitarios 
+## 9. Pruebas Unitarias 
 
 ![Test 100%](https://raw.githubusercontent.com/ivvnv/SCL013-data-lovers/master/src/img/tests_unitarios.png)
 
