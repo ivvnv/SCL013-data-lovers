@@ -82,7 +82,7 @@ Como dato: Tuvimos nuestro primer feedback de parte de nuestro squad.
  - Ingresar a la página de Guia para el Novato Absoluto.
  - Hacer click en el menú hamburguesa.
  - Elegir una opción (ver todo, casa, ocupación, linaje u otras
-   criaturas.
+   criaturas).
  - Escoger un personaje y leer la información que sale reflejada en su
    tarjeta.
  - Si quieres volver al inicio puedes clickear logo que está en la
