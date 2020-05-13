@@ -1,4 +1,4 @@
-![.](https://github.com/NayaFer/SCL013-data-lovers/blob/master/src/img/readme%20portada.png)
+![](https://raw.githubusercontent.com/NayaFer/SCL013-data-lovers/master/src/img/readme%20portada.png)
 
 # Wizards Unite: Guía para el Novato Absoluto
 
