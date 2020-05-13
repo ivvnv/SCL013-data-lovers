@@ -227,10 +227,6 @@ body {
   padding: 0;
 }
 
-html { 
-  overscroll-behavior-x: none
- }
-
 html,
 body {
   color: #28231b;
