@@ -1,30 +1,30 @@
 ![.](https://github.com/NayaFer/SCL013-data-lovers/blob/master/src/img/readme%20portada.png)
 
-# Guia para el novato absoluto
+# Guía para el novato absoluto
 
 ## Índice
 
-* [1. Introduccion](#1-Introduccion)
-* [2. Definicion de Usuario](#2-Definicion-de-Usuario)
+* [1. Introducción](#1-Introducción)
+* [2. Definición de Usuario](#2-Definición-de-Usuario)
 * [3. Historias de Usuarios](#3-Historias-de-Usuarios)
-* [4. Proceso y desiciones de diseño](#4-Proceso-y-desiciones-de-diseño)
+* [4. Proceso y decisiones de Diseño](#4-Proceso-y-decisiones-de-Diseño)
 * [5. Protopipo baja fidelidad](#5-Prototipo-baja-fidelidad)
 * [6. Prototipo alta fidelidad](#6-Prototipo-alta-fidelidad)
-* [7. Como utilzar la plataforma](#7-Como-utiluzar-la-plataforma)
+* [7. Cómo utilzar la plataforma](#7-Cómo-utilizar-la-plataforma)
 * [8. Testeos](#8-Testeos)
 * [9. Checklist](#9-checklist)
 
 ***
 
-## 1. Indroduccion
+## 1. Indroducción
 
-"Guía para el novato absoluto de  Harry Potter" es nuestro proyecto de data lovers en laboratoria. Nuestro sitio está orientado a personas novatas en el juego de wizards unite de Harry Potter. En esta app podrán visializar la descripción de cada personaje con un simple click ; ver cosas como su casa , patronus o ver el material de su varita.
+"Guía para el novato absoluto de Harry Potter" es nuestro proyecto de Data Lovers en Laboratoria. Nuestro sitio está orientado a personas novatas en el juego Wizards Unite del universo Harry Potter. En esta app podrán visualizar la descripción de cada personaje con un simple click; ver cosas como su casa, patronus o el material de su varita.
 
 Buscamos guiarte en la toma de decisiones que puedas tomar al momento de elegir un personaje en el juego.
 
-## 2. Definicion de Usuario
+## 2. Definición de Usuario
 
-“Guia para el novato absoluto” esta orientada a personas que se quieran aventurar en el mundo mágico y puedan tener información relevante para poder jugar Harry Potetr : Wizards Unite.
+“Guía para el novato absoluto” esta orientada a personas que se quieran aventurar en el mundo mágico y puedan tener información relevante para poder jugar Harry Potter: Wizards Unite.
 
 
 ## 3. Historias de Usuarios
@@ -32,7 +32,6 @@ Buscamos guiarte en la toma de decisiones que puedas tomar al momento de elegir 
 Historia 1 : Como usuario principiante (fan de los libros )  
  - Quiero conocer que personajes del libro están en el juego 
  - Para poder jugar con mi personaje favorito
-
 
 Historia 2 : Como usuario principiante ( fan de las películas ) 
 
@@ -51,18 +50,17 @@ Historia 4 : Como usuario principiante (fan de Harry potter )
 
 
 
+## 4. Proceso y decisiones de Diseño
 
-## 4. Proceso y desiciones de diseño
-
-Lo primero que hicimos al decidir nuestro proyecto fue generar un prototipo de baja fidelidad, como se puede ver en la primera imagen , luego hicimos un prototipo de alta fidelidad , tratamos de hacerlo muy similar a el de baja fidelidad. Teniendo cambios mínimos.
+Lo primero que hicimos al decidir nuestro proyecto fue generar un prototipo de baja fidelidad, como se puede ver en la primera imagen, luego hicimos un prototipo de alta fidelidad, tratamos de hacerlo muy similar al de baja fidelidad, teniendo cambios mínimos.
  
-Como dato :Hicimos nuestro primer feedback con nuestro squad.
+Como dato: Tuvimos nuestro primer feedback de parte de nuestro squad.
 
-# Hoja de Estilo 
+# Paleta de colores
 ![.](https://github.com/NayaFer/SCL013-data-lovers/blob/master/src/img/readme_paleta.png)
 
 
-## 5. Protopipo baja fidelidad
+## 5. Prototipo baja fidelidad
 
 ![FOTO](https://github.com/NayaFer/SCL013-data-lovers/blob/master/src/img/bajafidelidad.jpeg)
 
@@ -79,24 +77,24 @@ Como dato :Hicimos nuestro primer feedback con nuestro squad.
 [Enlace Figma](https://www.figma.com/file/8Bg2SLPzDN2GJDezOc5EUx/data-lovers?node-id=0:1)
 
 
-## 7. Como utilzar la plataforma
+## 7. Cómo utilzar la plataforma
 
- - Ingresar a la página de Guia para el novato Absoluto.
+ - Ingresar a la página de Guia para el Novato Absoluto.
  - Hacer click en el menú hamburguesa.
- - Elegir una opción ( ver todo ,casa , ocupación , linaje u otras
-   criaturas .
- - Escoger en personaje y leer la información que sale reflejada en su
+ - Elegir una opción (ver todo, casa, ocupación, linaje u otras
+   criaturas.
+ - Escoger un personaje y leer la información que sale reflejada en su
    tarjeta.
  - Si quieres volver al inicio puedes clickear logo que está en la
-   esquina
+   esquina superior izquierda.
  
 
-**Tener en consideración :**
-No sales todos los personajes del juego.
+**Tener en consideración:**
+No salen todos los personajes del juego.
 
 ## 8.Testeos
 
-(ubicar garficos )
+(ubicar gráficos )
 
 [Enlace Maze](https://t.maze.design/10897011)
 
