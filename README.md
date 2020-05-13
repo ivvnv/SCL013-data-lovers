@@ -1,4 +1,4 @@
-![](https://raw.githubusercontent.com/NayaFer/SCL013-data-lovers/master/src/img/readme%20portada.png)
+![](https://raw.githubusercontent.com/ivvnv/SCL013-data-lovers/master/src/img/readme_portada.png)
 
 # Wizards Unite: Guía para el Novato Absoluto
 
@@ -57,12 +57,12 @@ Lo primero que hicimos al decidir nuestro proyecto fue generar un prototipo de b
 Como dato: Tuvimos nuestro primer feedback de parte de nuestro squad.
 
 # Paleta de colores
-![.](https://github.com/NayaFer/SCL013-data-lovers/blob/master/src/img/readme_paleta.png)
+![.](https://raw.githubusercontent.com/ivvnv/SCL013-data-lovers/master/src/img/readme_paleta.png)
 
 
 ## 5. Prototipo baja fidelidad
 
-![FOTO](https://github.com/NayaFer/SCL013-data-lovers/blob/master/src/img/bajafidelidad.jpeg)
+![FOTO](https://raw.githubusercontent.com/ivvnv/SCL013-data-lovers/master/src/img/bajafidelidad.jpeg)
 
 
 ## 6. Prototipo alta fidelidad
