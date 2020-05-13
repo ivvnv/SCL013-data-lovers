@@ -1,6 +1,6 @@
 ![.](https://github.com/NayaFer/SCL013-data-lovers/blob/master/src/img/readme%20portada.png)
 
-# Guía para el novato absoluto
+# Guía para el Novato Absoluto
 
 ## Índice
 
@@ -16,7 +16,7 @@
 
 ***
 
-## 1. Indroducción
+## 1. Introducción
 
 "Guía para el novato absoluto de Harry Potter" es nuestro proyecto de Data Lovers en Laboratoria. Nuestro sitio está orientado a personas novatas en el juego Wizards Unite del universo Harry Potter. En esta app podrán visualizar la descripción de cada personaje con un simple click; ver cosas como su casa, patronus o el material de su varita.
 
