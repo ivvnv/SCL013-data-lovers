@@ -12,7 +12,8 @@
 * [6. Prototipo alta fidelidad](#6-Prototipo-alta-fidelidad)
 * [7. Cómo utilzar la plataforma](#7-Cómo-utilizar-la-plataforma)
 * [8. Testeos](#8-Testeos)
-* [9. Checklist](#9-checklist)
+* [9. Pruebas Unitarias](#9-Pruebas-Unitarias)
+* [10. Checklist](#10-checklist)
 
 ***
 
@@ -92,22 +93,34 @@ Como dato: Tuvimos nuestro primer feedback de parte de nuestro squad.
 **Tener en consideración:**
 No salen todos los personajes del juego.
 
-## 8.Testeos
+## 8. Testeos
 
-(ubicar gráficos )
+Nuestros testeos fueron hechos por Maze, donde pudimos sacar informes porcentuales de usuabilidad, acceso directo y ruta esperada.
+
+
+**Porcentajes de Usuabilidad Testeos**
+
+![Usuabilidad](https://raw.githubusercontent.com/ivvnv/SCL013-data-lovers/master/src/img/maze1.png)
+![Acceso directo](https://raw.githubusercontent.com/ivvnv/SCL013-data-lovers/master/src/img/maze2.png)
+![Visión general](https://raw.githubusercontent.com/ivvnv/SCL013-data-lovers/master/src/img/maze3.png)
+![.](https://raw.githubusercontent.com/ivvnv/SCL013-data-lovers/master/src/img/maze4.png)
+![Grafico Ruta esperada](https://raw.githubusercontent.com/ivvnv/SCL013-data-lovers/master/src/img/maze5.png)
 
 [Enlace Maze](https://t.maze.design/10897011)
 
 
 ***
+## 9. Pruebas Unitarias 
 
-## 9. Checklist
+![Test 100%](https://raw.githubusercontent.com/ivvnv/SCL013-data-lovers/master/src/img/tests_unitarios.png)
+
+## 10. Checklist
 
 * [x] Usa VanillaJS.
 * [x] No hace uso de `this`.
 * [x] Pasa linter (`npm run pretest`)
-* [ ] Pasa tests (`npm test`)
-* [ ] Pruebas unitarias cubren un mínimo del 70% de statements, functions y
+* [x] Pasa tests (`npm test`)
+* [x] Pruebas unitarias cubren un mínimo del 70% de statements, functions y
   lines y branches.
 * [x] Incluye _Definición del producto_ clara e informativa en `README.md`.
 * [x] Incluye historias de usuario en `README.md`.
@@ -119,6 +132,6 @@ No salen todos los personajes del juego.
 * [ ] Incluye el listado de problemas que detectaste a través de tests de
   usabilidad en el `README.md`.
 * [ ] UI: Muestra lista y/o tabla con datos y/o indicadores.
-* [ ] UI: Permite ordenar data por uno o más campos (asc y desc).
+* [x] UI: Permite ordenar data por uno o más campos (asc y desc).
 * [x] UI: Permite filtrar data en base a una condición.
-* [ ] UI: Es _responsive_.
+* [x] UI: Es _responsive_.
