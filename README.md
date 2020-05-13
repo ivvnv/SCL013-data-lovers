@@ -71,7 +71,7 @@ Como dato: Tuvimos nuestro primer feedback de parte de nuestro squad.
 ![FOTO2](https://github.com/NayaFer/SCL013-data-lovers/blob/master/src/img/figma2.png)
 ![FOTO3](https://github.com/NayaFer/SCL013-data-lovers/blob/master/src/img/figma3.png)
 ![FOTO4](https://github.com/NayaFer/SCL013-data-lovers/blob/master/src/img/figma4.png)
-![FOTO5](https://github.com/NayaFer/SCL013-data-lovers/blob/master/src/img/fimga5.png)
+![FOTO5](https://raw.githubusercontent.com/ivvnv/SCL013-data-lovers/master/src/img/figma5.png)
 
 
 [Enlace Figma](https://www.figma.com/file/8Bg2SLPzDN2GJDezOc5EUx/data-lovers?node-id=0:1)
