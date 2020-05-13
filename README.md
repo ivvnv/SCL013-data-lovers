@@ -1,6 +1,6 @@
 ![.](https://github.com/NayaFer/SCL013-data-lovers/blob/master/src/img/readme%20portada.png)
 
-# Guía para el Novato Absoluto
+# Wizards Unite: Guía para el Novato Absoluto
 
 ## Índice
 
@@ -8,7 +8,7 @@
 * [2. Definición de Usuario](#2-Definición-de-Usuario)
 * [3. Historias de Usuarios](#3-Historias-de-Usuarios)
 * [4. Proceso y decisiones de Diseño](#4-Proceso-y-decisiones-de-Diseño)
-* [5. Protopipo baja fidelidad](#5-Prototipo-baja-fidelidad)
+* [5. Prototipo baja fidelidad](#5-Prototipo-baja-fidelidad)
 * [6. Prototipo alta fidelidad](#6-Prototipo-alta-fidelidad)
 * [7. Cómo utilzar la plataforma](#7-Cómo-utilizar-la-plataforma)
 * [8. Testeos](#8-Testeos)
