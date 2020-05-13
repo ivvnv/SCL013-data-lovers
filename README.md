@@ -109,7 +109,7 @@ No salen todos los personajes del juego.
 * [ ] Pasa tests (`npm test`)
 * [ ] Pruebas unitarias cubren un mínimo del 70% de statements, functions y
   lines y branches.
-* [ ] Incluye _Definición del producto_ clara e informativa en `README.md`.
+* [x] Incluye _Definición del producto_ clara e informativa en `README.md`.
 * [x] Incluye historias de usuario en `README.md`.
 * [x] Incluye _sketch_ de la solución (prototipo de baja fidelidad) en
   `README.md`.
@@ -120,5 +120,5 @@ No salen todos los personajes del juego.
   usabilidad en el `README.md`.
 * [ ] UI: Muestra lista y/o tabla con datos y/o indicadores.
 * [ ] UI: Permite ordenar data por uno o más campos (asc y desc).
-* [ ] UI: Permite filtrar data en base a una condición.
+* [x] UI: Permite filtrar data en base a una condición.
 * [ ] UI: Es _responsive_.
