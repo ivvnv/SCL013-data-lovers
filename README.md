@@ -18,13 +18,13 @@
 
 ## 1. Introducción
 
-"Guía para el novato absoluto de Harry Potter" es nuestro proyecto de Data Lovers en Laboratoria. Nuestro sitio está orientado a personas novatas en el juego Wizards Unite del universo Harry Potter. En esta app podrán visualizar la descripción de cada personaje con un simple click; ver cosas como su casa, patronus o el material de su varita.
+"Guía para el Novato Absoluto de Harry Potter" es nuestro proyecto de *Data Lovers* en Laboratoria. Nuestro sitio está orientado a personas principiantes en el juego Wizards Unite del universo Harry Potter. En esta app podrán visualizar la descripción de cada personaje con un simple click; ver cosas como su casa, su ocupación, su patronus o el material de su varita.
 
-Buscamos guiarte en la toma de decisiones que puedas tomar al momento de elegir un personaje en el juego.
+Buscamos guiarte en la toma de decisiones con las que puedas encontrarte al momento de elegir un personaje en el juego.
 
 ## 2. Definición de Usuario
 
-“Guía para el novato absoluto” esta orientada a personas que se quieran aventurar en el mundo mágico y puedan tener información relevante para poder jugar Harry Potter: Wizards Unite.
+“Guía para el Novato Absoluto” esta orientada a personas que se quieran aventurar en el mundo mágico y puedan tener información relevante para poder jugar Harry Potter: Wizards Unite.
 
 
 ## 3. Historias de Usuarios
