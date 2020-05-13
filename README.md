@@ -1,4 +1,4 @@
-![](https://raw.githubusercontent.com/ivvnv/SCL013-data-lovers/master/src/img/readme_portada.png)
+![header](https://raw.githubusercontent.com/ivvnv/SCL013-data-lovers/master/src/img/readme_portada.png)
 
 # Wizards Unite: Guía para el Novato Absoluto
 
@@ -57,7 +57,7 @@ Lo primero que hicimos al decidir nuestro proyecto fue generar un prototipo de b
 Como dato: Tuvimos nuestro primer feedback de parte de nuestro squad.
 
 # Paleta de colores
-![.](https://raw.githubusercontent.com/ivvnv/SCL013-data-lovers/master/src/img/readme_paleta.png)
+![palette](https://raw.githubusercontent.com/ivvnv/SCL013-data-lovers/master/src/img/readme_paleta.png)
 
 
 ## 5. Prototipo baja fidelidad
@@ -67,10 +67,10 @@ Como dato: Tuvimos nuestro primer feedback de parte de nuestro squad.
 
 ## 6. Prototipo alta fidelidad
 
-![FOTO1](https://github.com/NayaFer/SCL013-data-lovers/blob/master/src/img/figma1.png)
-![FOTO2](https://github.com/NayaFer/SCL013-data-lovers/blob/master/src/img/figma2.png)
-![FOTO3](https://github.com/NayaFer/SCL013-data-lovers/blob/master/src/img/figma3.png)
-![FOTO4](https://github.com/NayaFer/SCL013-data-lovers/blob/master/src/img/figma4.png)
+![FOTO1](https://raw.githubusercontent.com/ivvnv/SCL013-data-lovers/master/src/img/figma1.png)
+![FOTO2](https://raw.githubusercontent.com/ivvnv/SCL013-data-lovers/master/src/img/figma2.png)
+![FOTO3](https://raw.githubusercontent.com/ivvnv/SCL013-data-lovers/master/src/img/figma3.png)
+![FOTO4](https://raw.githubusercontent.com/ivvnv/SCL013-data-lovers/master/src/img/figma4.png)
 ![FOTO5](https://raw.githubusercontent.com/ivvnv/SCL013-data-lovers/master/src/img/figma5.png)
 
 
