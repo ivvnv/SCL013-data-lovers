@@ -11,9 +11,8 @@
 }
 
 .item {
-font-size: x-large;
 max-width: 500px;
-margin: auto;
+
 }
 
 #menu:checked ~ .multi-level, .item input:checked ~ ul {
@@ -28,7 +27,7 @@ margin: auto;
   vertical-align: middle;
   float: right;
   z-index: 0;
-  margin: 17px 1em 0 2em;
+  margin: 20px 1em 0 2em;
 }
 
 .item input + .arrow {
@@ -58,18 +57,17 @@ label {
 
 .nav ul, .nav li, label {
   line-height: 50px;
- 
   list-style: none;
- 
   width: 100%;
 }
 
 label[for=A], label[for=B], label[for=C] {
   color: #28231b;
+  font-family: "Playfair Display", serif;
   text-decoration: none;
-  padding: 0 0.6em;
-  font-weight: 400;
-  font-size: 100%;
+  padding: 0 0.8em;
+  font-weight: 500;
+  font-size: 1.4rem;
 }
 
 label[for=A]:hover, label[for=B]:hover, label[for=C]:hover {
@@ -77,9 +75,9 @@ background: #28231B;
   color: #D0B88E;
 }
 
-.item ul {
+/* .item ul {
   padding: 0 0.25em;
-}
+} */
 
 /*Slider side menu*/
 .slider-menu {
@@ -116,12 +114,13 @@ h5 {
 
 a {
   display: block;
-  padding: 0.1em;
   margin: 0.4em;
   font-family: "Playfair Display", serif;
   text-decoration: none;
   color: #28231b;
   font-weight: 500;
+  font-size: 1.4rem;
+  padding: 0 0.4em;
 }
 
 #link-todos:hover, #link-otras:hover { /*todos y otras*/
@@ -227,6 +226,10 @@ body {
   margin: 0;
   padding: 0;
 }
+
+html { 
+  overscroll-behavior-x: none
+ }
 
 html,
 body {
