@@ -32,23 +32,21 @@ export const houseH = (harryData) => {
     return houseHufflepuff;
   }
 
+  //Filters by Ancestry
+   export const san = (harryData) => {
+    let pureblood= harryData.filter (data =>
+    data.ancestry === "sangre-pura");
+     return pureblood;
+        }
+  export const mes = (harryData) => {
+   let mes = harryData.filter (data=>
+    data.ancestry === "mestizo");
+   return mes;
+       }     
 
-//Filters by Ancestry
-export const san = (harryData) => {
-  let pureblood= harryData.filter (data =>
-    data.ancestry === "pure-blood");
-    return pureblood;
-  }
-
-export const mes = (harryData) => {
-  let mes = harryData.filter (data=>
-    data.ancestry === "half-blood");
-    return mes;
-  }     
-
-export const hij = (harryData) => {
-  let muggleborn = harryData.filter ( data =>
-    data.ancestry === "muggleborn");
+   export const hij = (harryData) => {
+   let muggleborn = harryData.filter ( data =>
+    data.ancestry === "muggles");
     return muggleborn;
   }    
 
@@ -71,11 +69,12 @@ export const sta  = (harryData) => {
     return staff;
    }
 
-//Filter by other species (than human)
-export const otras = (harryData) => {
-  let criaturas = harryData.filter (data =>
-  data.species ===  "cat" || data.species === "half-giant" || data.species === "werewolf");
-    return criaturas ;
+   //Filter by other species (than human)
+  export const otras = (harryData) => {
+    let criaturas = harryData.filter (data =>
+      data.species ===  "gata" || data.species === "gigante" || data.species === "hombre-lobo");
+      
+      return criaturas ;
   }     
 
 

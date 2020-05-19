@@ -41,7 +41,7 @@ function viewAllHarry (harryData) {
     <h3 class= "harry-names" >${harryData[i].name}</h3>
     </div>`
     results.innerHTML = cardTemplate
-  }} 
+  }}
 
 const selectElement = document.querySelector(".dropdown-select");
 selectElement.addEventListener("change",(e) => {
@@ -54,12 +54,16 @@ selectElement.addEventListener("change",(e) => {
     viewAllHarry(orderedDataZa);
   }
 
- 
 });
 
 //How the page looks when you enter it
 document.getElementById("left-logo").style.visibility= "hidden";
 document.getElementById("selector").style.display= "none";
+
+const footer = document.createElement("P");
+footer.setAttribute("class", "footer")
+footer.innerText = `Data Lovers  |  por Nayareth Valdivia & Ivana Rivera para Laboratoria SCL 2020 ©`;
+document.getElementById("pantalla-inicio").appendChild(footer);
 
 //Todos
 document.getElementById("link-todos").addEventListener("click", ()=>{
@@ -273,7 +277,7 @@ document.getElementById("link-otras").addEventListener("click", ()=>{
 
 
 //Modal function
-  function modal(e){
+  function modal(){
       let modal = document.getElementById("harryModal");
       let modalContent = document.getElementById("modal-content");
       let buttons = document.getElementsByClassName("button");
@@ -306,17 +310,17 @@ document.getElementById("link-otras").addEventListener("click", ()=>{
             <p class="m-element">${harryData[i].wand.wood}, ${harryData[i].wand.core}, ${harryData[i].wand.length}</p>
             </div>
           </div>
-          <span class="close">&times;</span>   
+          <span class="close">&times;</span>
         </article>`;
 
 
-        let span = document.getElementsByClassName("close")[0]; 
+        let span = document.getElementsByClassName("close")[0];
         span.addEventListener('click', ()=>{
-          modal.style.display = "none"; 
-          modalContent.innerHTML="";  
+          modal.style.display = "none";
+          modalContent.innerHTML="";
         });
 
-        window.onclick = function(event) { 
+        window.onclick = function(event) {
           if (event.target == modal) {
             modal.style.display = "none";
             modalContent.innerHTML="";
