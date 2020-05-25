@@ -83,7 +83,7 @@ document.getElementById("gry").addEventListener("click", ()=>{
   } //this clears the screen and make space for new cards
     document.getElementById("pantalla-inicio").style.display = "none";
     document.getElementById("left-logo").style.visibility = "visible";
-    document.getElementById("selector").style.display= "none"; //solo funciona si se hace todos y dp gryff
+    document.getElementById("selector").style.display= "none";
 
     let houseGryffindor = seleccionadoG;
     for (let i=0; i <houseGryffindor.length; i++){
@@ -216,7 +216,7 @@ document.getElementById("mes").addEventListener("click", ()=>{
     document.getElementById("left-logo").style.visibility = "visible";
 
   let mestizo = seleccionadoMestizo;
-  for (let i=0; i<mes.length; i++){
+  for (let i=0; i<mestizo.length; i++){
     results.innerHTML += `<div class = "harryCards">
     <img class="harry-image" src= ${mestizo[i].image}>
     <h3 class= "harry-names" >${mestizo[i].name}</h3>
