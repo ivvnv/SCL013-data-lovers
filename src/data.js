@@ -1,4 +1,3 @@
-
 //Filters by House
 export const houseG = (harryData) => {
   let houseGryffindor = harryData.filter (data =>
@@ -24,20 +23,21 @@ export const houseH = (harryData) => {
     return houseHufflepuff;
   }
 
-  //Filters by Ancestry
-   export const san = (harryData) => {
-    let pureblood= harryData.filter (data =>
+//Filters by Ancestry
+export const san = (harryData) => {
+  let pureblood= harryData.filter (data =>
     data.ancestry === "sangre-pura");
-     return pureblood;
-        }
-  export const mes = (harryData) => {
-   let mes = harryData.filter (data=>
-    data.ancestry === "mestizo");
-   return mes;
-       }     
+    return pureblood;
+  }
 
-   export const hij = (harryData) => {
-   let muggleborn = harryData.filter (data =>
+export const mes = (harryData) => {
+  let mes = harryData.filter (data=>
+    data.ancestry === "mestizo");
+    return mes;
+  }     
+
+export const hij = (harryData) => {
+  let muggleborn = harryData.filter (data =>
     data.ancestry === "muggles");
     return muggleborn;
   }    
@@ -61,14 +61,13 @@ export const sta  = (harryData) => {
     return staff;
    }
 
-   //Filter by other species (than human)
-  export const otras = (harryData) => {
-    let criaturas = harryData.filter (data =>
-      data.species ===  "gata" || data.species === "gigante" || data.species === "hombre-lobo");
+//Filter by other species (than human)
+export const otras = (harryData) => {
+  let criaturas = harryData.filter (data =>
+    data.species ===  "gata" || data.species === "gigante" || data.species === "hombre-lobo");
       
-      return criaturas ;
+    return criaturas ;
   }     
-
 
 //Sort characters names from A to Z
 export const orderharryAz = (harryData)=>{
@@ -77,11 +76,11 @@ export const orderharryAz = (harryData)=>{
     newDataArray.push(harryData[i]);
   }
   newDataArray.sort((a, b) => {
-    if (a.name > b.name) {
-      return 1;
-    }
-    else if (a.name < b.name) {
+    if (a.name < b.name) {
       return -1;
+    }
+    else if (a.name > b.name) {
+      return 1;
     }
     return 0;
   });
@@ -95,11 +94,11 @@ export const orderharryZa = (harryData)=>{
     newDataArray.push(harryData[i]);
   }
   newDataArray.sort((a, b) => {
-    if (a.name > b.name) {
-      return -1;
-    }
-    else if (a.name < b.name) {
+    if (a.name < b.name) {
       return 1;
+    }
+    else if (a.name > b.name) {
+      return -1;
     }
     return 0;
   });

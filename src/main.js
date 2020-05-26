@@ -21,41 +21,6 @@ const orderedDataZa = orderharryZa (harryData)
 //Global scope variable
 let results = document.getElementById("results"); //screen that shows results made with functions
 
-function viewCardAndModal (harryData) {
-  let cardTemplate = "";
-  for (let i = 0; i < harryData.length; i++) {
-    cardTemplate  += `<div class = "harryCards">
-    <img class="harry-image" src= ${harryData[i].image}>
-    <h3 class= "harry-names" >${harryData[i].name}</h3>
-    <button class="button" id="modalBtn-${i}" style = "width:32px;height:32px">
-    <img src="img/btn_feather.svg"/></button>
-    </div>`
-    results.innerHTML = cardTemplate
-  }}
-
-function viewAllHarry (harryData) {
-  let cardTemplate = "";
-  for (let i = 0; i < harryData.length; i++) {
-    cardTemplate  += `<div class = "harryCards">
-    <img class="harry-image" src= ${harryData[i].image}>
-    <h3 class= "harry-names" >${harryData[i].name}</h3>
-    </div>`
-    results.innerHTML = cardTemplate
-  }}
-
-const selectElement = document.querySelector(".dropdown-select");
-selectElement.addEventListener("change",(e) => {
-  const resultado =`${e.target.value}`;
-
-  if  (resultado === "A-Z"){
-    viewAllHarry(orderedDataAz);
-  }
-  else if (resultado === "Z-A"){
-    viewAllHarry(orderedDataZa);
-  }
-
-});
-
 //How the page looks when you enter it
 document.getElementById("left-logo").style.visibility= "hidden";
 document.getElementById("selector").style.display= "none";
@@ -275,6 +240,19 @@ document.getElementById("link-otras").addEventListener("click", ()=>{
     }
   });
 
+  
+//Functions for cards
+  function viewCardAndModal (harryData) { //card and button for modal
+    let cardTemplate = "";
+    for (let i = 0; i < harryData.length; i++) {
+      cardTemplate  += `<div class = "harryCards">
+      <img class="harry-image" src= ${harryData[i].image}>
+      <h3 class= "harry-names" >${harryData[i].name}</h3>
+      <button class="button" id="modalBtn-${i}" style = "width:32px;height:32px">
+      <img src="img/btn_feather.svg"/></button>
+      </div>`
+      results.innerHTML = cardTemplate
+    }}
 
 //Modal function
   function modal(){
@@ -314,17 +292,41 @@ document.getElementById("link-otras").addEventListener("click", ()=>{
         </article>`;
 
 
-        let span = document.getElementsByClassName("close")[0];
-        span.addEventListener('click', ()=>{
+      let span = document.getElementsByClassName("close")[0];
+      span.addEventListener('click', ()=>{
           modal.style.display = "none";
           modalContent.innerHTML="";
         });
 
-        window.onclick = function(event) {
-          if (event.target == modal) {
+      window.onclick = function(event) {
+      if (event.target == modal) {
             modal.style.display = "none";
             modalContent.innerHTML="";
           }};
       })}
     }
 
+  //All cards to sort alphabetically
+    function viewAllHarry (harryData) { 
+      let cardTemplate = "";
+      for (let i = 0; i < harryData.length; i++) {
+        cardTemplate  += `<div class = "harryCards">
+        <img class="harry-image" src= ${harryData[i].image}>
+        <h3 class= "harry-names" >${harryData[i].name}</h3>
+        </div>`
+        results.innerHTML = cardTemplate
+      }}
+    
+      //sort A-Z or Z-A clicking the selector drop-down
+    const selectElement = document.querySelector(".dropdown-select");
+    selectElement.addEventListener("change",(e) => {
+      const resultado =`${e.target.value}`;
+    
+      if  (resultado === "A-Z"){
+        viewAllHarry(orderedDataAz);
+      }
+      else if (resultado === "Z-A"){
+        viewAllHarry(orderedDataZa);
+      }
+    
+    });
